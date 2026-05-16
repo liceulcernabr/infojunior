@@ -173,6 +173,7 @@ footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('tRezultate',this)">📄 Rezultate PDF</button>
     <button class="tab-btn" onclick="switchTab('tGalerie',this)">🖼️ Galerie</button>
+    <button class="tab-btn" onclick="switchTab('tVideos',this)">🤖 Robotică Video</button>
     <button class="tab-btn" onclick="switchTab('tLucrari',this)">📁 Toate Lucrările</button>
   </div>
 
@@ -191,6 +192,11 @@ footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
     <div class="gallery-grid" id="galleryGrid">
       <div class="loading" style="grid-column:1/-1">Se încarcă galeria...</div>
     </div>
+  </div>
+
+  <!-- VIDEOS ROBOTICA -->
+  <div class="tab-panel" id="tVideos">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;" id="videoGrid"></div>
   </div>
 
   <!-- LUCRARI -->
@@ -272,6 +278,37 @@ var EXT_ICONS = {pdf:'📄',pptx:'📊',ppt:'📊',sb3:'🐱',html:'🌐',htm:'�
 var allLucrari = [];
 var currentFilter = 'all';
 
+// ── Videos Robotică ───────────────────────────────────────────────────────────
+var VIDEOS = [
+  {id:'ww665cSDCK4', tip:'shorts', titlu:'Robot Autonom 1'},
+  {id:'28qmWFMiHys', tip:'shorts', titlu:'Robot Autonom 2'},
+  {id:'LwWmjlD-XzE', tip:'shorts', titlu:'Robot Autonom 3'},
+  {id:'iM3kYyJkVOY', tip:'shorts', titlu:'Robot Autonom 4'},
+  {id:'bzB4ZMcYjuk', tip:'video',  titlu:'Robot Autonom 5'},
+];
+
+function renderVideos(){
+  var el = document.getElementById('videoGrid');
+  el.innerHTML = VIDEOS.map(function(v){
+    var ytUrl = v.tip === 'shorts'
+      ? 'https://youtube.com/shorts/' + v.id
+      : 'https://youtu.be/' + v.id;
+    var thumb = 'https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg';
+    return '<div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform=\'translateY(-3px)\';this.style.boxShadow=\'0 8px 24px rgba(26,86,196,.13)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">'
+      + '<a href="'+ytUrl+'" target="_blank" style="display:block;position:relative;text-decoration:none;">'
+      + '<img src="'+thumb+'" alt="'+esc(v.titlu)+'" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy">'
+      + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);">'
+      + '<div style="width:56px;height:56px;background:#ff0000;border-radius:50%;display:flex;align-items:center;justify-content:center;">'
+      + '<svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>'
+      + '</div></div></a>'
+      + '<div style="padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;">'
+      + '<span style="font-size:.9rem;font-weight:800;">🤖 '+esc(v.titlu)+'</span>'
+      + '<a href="'+ytUrl+'" target="_blank" style="font-size:.78rem;color:var(--blue);font-weight:700;text-decoration:none;">Vezi pe YouTube ↗</a>'
+      + '</div></div>';
+  }).join('');
+}
+renderVideos();
+
 // ── Poster ────────────────────────────────────────────────────────────────────
 (function(){
   var src = 'data:image/jpeg;base64,' + POSTER_B64;
@@ -304,7 +341,9 @@ fetch('data.json?v=' + Date.now())
 
 function renderError(){
   document.getElementById('sLucrari').textContent='—';
-  document.getElementById('pdfList').innerHTML = '<div class="empty-state"><div class="ei">⚠️</div><p>Nu s-a putut încărca data.json.<br>Rulează generate_data.py sau verifică GitHub Actions.</p></div>';
+  document.getElementById('pdfList').innerHTML = '<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;">Revino pe site după finalizarea concursului.</p></div>';
+  document.getElementById('galleryGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">🎨</div><p style="font-weight:800;">Galeria se pregătește!</p><p style="font-size:.88rem;margin-top:.4rem;">Lucrările vor apărea în curând.</p></div>';
+  document.getElementById('lucrariGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">📁</div><p style="font-weight:800;">Lucrările vor apărea în curând!</p></div>';
   renderSectiuni();
 }
 
