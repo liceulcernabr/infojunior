@@ -1,8 +1,8 @@
 {
-  "actualizat": "16.05.2026 15:22 UTC",
+  "actualizat": "16.05.2026 16:48 UTC",
   "stats": {
-    "total_lucrari": 0,
-    "total_imagini": 0,
+    "total_lucrari": 10,
+    "total_imagini": 10,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -64,6 +64,87 @@
       "extensii_imagine": true
     }
   },
-  "lucrari": [],
+  "lucrari": [
+    {
+      "fisier": "ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
+      "cale": "lucrari/grafica/ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
+      "titlu": "Adaugă Un Antet 20260508 222405 0000",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "AI-STERPU DARIA.png",
+      "cale": "lucrari/grafica/AI-STERPU DARIA.png",
+      "titlu": "Ai Sterpu Daria",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Aparece Stefan Daniel cl 5 B +.png",
+      "cale": "lucrari/grafica/Aparece Stefan Daniel cl 5 B +.png",
+      "titlu": "Aparece Stefan Daniel Cl 5 B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Arion Elisa_CN Calistrat Hogas Tecuci_prof.Ionita Doina.jpg",
+      "cale": "lucrari/grafica/Arion Elisa_CN Calistrat Hogas Tecuci_prof.Ionita Doina.jpg",
+      "titlu": "Arion Elisa Cn Calistrat Hogas Tecuci Prof.Ionita Doina",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Beige and White Be Yourself Square Pillow_20260507_234624_0000.jpg",
+      "cale": "lucrari/grafica/Beige and White Be Yourself Square Pillow_20260507_234624_0000.jpg",
+      "titlu": "Beige And White Be Yourself Square Pillow 20260507 234624 0000",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Biblioteca virtuală - Broască Delia.png",
+      "cale": "lucrari/grafica/Biblioteca virtuală - Broască Delia.png",
+      "titlu": "Biblioteca Virtuală   Broască Delia",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Cacenco Alice Georgiana.png",
+      "cale": "lucrari/grafica/Cacenco Alice Georgiana.png",
+      "titlu": "Cacenco Alice Georgiana",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Chihaia Elena_CN Calistrat Hogas Tecuci_prof.Ionita Doina.jpg",
+      "cale": "lucrari/grafica/Chihaia Elena_CN Calistrat Hogas Tecuci_prof.Ionita Doina.jpg",
+      "titlu": "Chihaia Elena Cn Calistrat Hogas Tecuci Prof.Ionita Doina",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Cotea Yanis cl 5 B +.png",
+      "cale": "lucrari/grafica/Cotea Yanis cl 5 B +.png",
+      "titlu": "Cotea Yanis Cl 5 B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "DAVID ANDREI CL 5 B +.jpg",
+      "cale": "lucrari/grafica/DAVID ANDREI CL 5 B +.jpg",
+      "titlu": "David Andrei Cl 5 B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    }
+  ],
   "rezultate": []
 }
