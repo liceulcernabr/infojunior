@@ -1,7 +1,7 @@
 {
-  "actualizat": "16.05.2026 16:58 UTC",
+  "actualizat": "16.05.2026 17:08 UTC",
   "stats": {
-    "total_lucrari": 42,
+    "total_lucrari": 47,
     "total_imagini": 41,
     "total_rezultate": 0,
     "total_sectiuni": 8
@@ -400,6 +400,46 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "png"
+    },
+    {
+      "fisier": "Călatorie în Rio de Janeiro- Cotigă Iustin.pdf",
+      "cale": "lucrari/powerpoint/Călatorie în Rio de Janeiro- Cotigă Iustin.pdf",
+      "titlu": "Călatorie În Rio De Janeiro  Cotigă Iustin",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "Căpățînă Dalia-SOS Natura.pdf",
+      "cale": "lucrari/powerpoint/Căpățînă Dalia-SOS Natura.pdf",
+      "titlu": "Căpățînă Dalia Sos Natura",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "Hobby-urile mele.pdf",
+      "cale": "lucrari/powerpoint/Hobby-urile mele.pdf",
+      "titlu": "Hobby Urile Mele",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
+      "cale": "lucrari/powerpoint/PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
+      "titlu": "Al.I.Cuza Damian Lepadatu",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "concurs tic.pdf",
+      "cale": "lucrari/powerpoint/concurs tic.pdf",
+      "titlu": "Concurs Tic",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
     }
   ],
   "rezultate": []
