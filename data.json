@@ -1,8 +1,8 @@
 {
-  "actualizat": "16.05.2026 17:39 UTC",
+  "actualizat": "16.05.2026 18:11 UTC",
   "stats": {
-    "total_lucrari": 47,
-    "total_imagini": 41,
+    "total_lucrari": 46,
+    "total_imagini": 40,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -389,14 +389,6 @@
       "fisier": "Vasilache Andreea clasa a 5 a +.png",
       "cale": "lucrari/grafica/Vasilache Andreea clasa a 5 a +.png",
       "titlu": "Vasilache Andreea Clasa A 5 A +",
-      "sectiune": "grafica",
-      "este_imagine": true,
-      "extensie": "png"
-    },
-    {
-      "fisier": "unnamed.png",
-      "cale": "lucrari/grafica/unnamed.png",
-      "titlu": "Unnamed",
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "png"
