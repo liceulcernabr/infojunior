@@ -1,8 +1,8 @@
 {
-  "actualizat": "16.05.2026 16:48 UTC",
+  "actualizat": "16.05.2026 16:55 UTC",
   "stats": {
-    "total_lucrari": 10,
-    "total_imagini": 10,
+    "total_lucrari": 22,
+    "total_imagini": 22,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -65,6 +65,102 @@
     }
   },
   "lucrari": [
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Borghina_Maria.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Borghina_Maria.png",
+      "titlu": "Sc.Gimn.Vurpar Borghina Maria",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Cipariu_Ovidiu.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Cipariu_Ovidiu.png",
+      "titlu": "Sc.Gimn.Vurpar Cipariu Ovidiu",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Cristea_Razvan.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Cristea_Razvan.png",
+      "titlu": "Sc.Gimn.Vurpar Cristea Razvan",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Gabor_Natalia.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Gabor_Natalia.png",
+      "titlu": "Sc.Gimn.Vurpar Gabor Natalia",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Grau_Johana.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Grau_Johana.png",
+      "titlu": "Sc.Gimn.Vurpar Grau Johana",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Mihu_Rares.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Mihu_Rares.png",
+      "titlu": "Sc.Gimn.Vurpar Mihu Rares",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Neagu_Nicoleta.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Neagu_Nicoleta.png",
+      "titlu": "Sc.Gimn.Vurpar Neagu Nicoleta",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Rominoaea_Miruna.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Rominoaea_Miruna.png",
+      "titlu": "Sc.Gimn.Vurpar Rominoaea Miruna",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Stupu_Raisa.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Stupu_Raisa.png",
+      "titlu": "Sc.Gimn.Vurpar Stupu Raisa",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Tutuianu_Andra.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Tutuianu_Andra.png",
+      "titlu": "Sc.Gimn.Vurpar Tutuianu Andra",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Sc.Gimn.Vurpar_Vaculisteanu_Mario.png",
+      "cale": "lucrari/basme/BASME_Sc.Gimn.Vurpar_Vaculisteanu_Mario.png",
+      "titlu": "Sc.Gimn.Vurpar Vaculisteanu Mario",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "BASME_Școala Gimnazială Ostrovu Aluniș_Bîgiu_ Vasile Rares.png",
+      "cale": "lucrari/basme/BASME_Școala Gimnazială Ostrovu Aluniș_Bîgiu_ Vasile Rares.png",
+      "titlu": "Școala Gimnazială Ostrovu Aluniș Bîgiu  Vasile Rares",
+      "sectiune": "basme",
+      "este_imagine": true,
+      "extensie": "png"
+    },
     {
       "fisier": "ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
       "cale": "lucrari/grafica/ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
