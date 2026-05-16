@@ -1,7 +1,7 @@
 {
-  "actualizat": "16.05.2026 19:14 UTC",
+  "actualizat": "16.05.2026 19:17 UTC",
   "stats": {
-    "total_lucrari": 46,
+    "total_lucrari": 47,
     "total_imagini": 39,
     "total_rezultate": 0,
     "total_sectiuni": 8
@@ -413,6 +413,14 @@
       "fisier": "PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
       "cale": "lucrari/powerpoint/PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
       "titlu": "Al.I.Cuza Damian Lepadatu",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "Protejam planeta_Andrei Gabriela.pdf",
+      "cale": "lucrari/powerpoint/Protejam planeta_Andrei Gabriela.pdf",
+      "titlu": "Protejam Planeta Andrei Gabriela",
       "sectiune": "powerpoint",
       "este_imagine": false,
       "extensie": "pdf"
