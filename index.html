@@ -378,7 +378,7 @@ function renderSectiuni(){
 function renderRezultate(rezultate){
   var el = document.getElementById('pdfList');
   if(!rezultate.length){
-    el.innerHTML='<div class="empty-state"><div class="ei">📄</div><p style="font-weight:600">Nu există încă rezultate publicate.</p><p style="font-size:.85rem;margin-top:.3rem">Adaugă PDF-uri în folderul <code>rezultate/</code> și dă push.</p></div>';
+    el.innerHTML='<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor fi publicate în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Revino pe site după finalizarea concursului.</p></div>';
     return;
   }
   el.innerHTML = rezultate.map(function(r,i){
