@@ -1,8 +1,8 @@
 {
   "actualizat": "16.05.2026 18:11 UTC",
   "stats": {
-    "total_lucrari": 46,
-    "total_imagini": 40,
+    "total_lucrari": 45,
+    "total_imagini": 39,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -320,14 +320,6 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "jpeg"
-    },
-    {
-      "fisier": "Marin Andreea Miruna cls 5B + (1).jpg",
-      "cale": "lucrari/grafica/Marin Andreea Miruna cls 5B + (1).jpg",
-      "titlu": "Marin Andreea Miruna Cls 5B + (1)",
-      "sectiune": "grafica",
-      "este_imagine": true,
-      "extensie": "jpg"
     },
     {
       "fisier": "Marin Andreea Miruna cls 5B +.jpg",
