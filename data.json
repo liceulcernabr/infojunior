@@ -1,0 +1,69 @@
+{
+  "actualizat": "16.05.2026 15:22 UTC",
+  "stats": {
+    "total_lucrari": 0,
+    "total_imagini": 0,
+    "total_rezultate": 0,
+    "total_sectiuni": 8
+  },
+  "sectiuni": {
+    "basme": {
+      "label": "Lumea Basmelor",
+      "ciclu": "primar",
+      "icon": "🎨",
+      "color": "#fff3cd",
+      "extensii_imagine": true
+    },
+    "grafica": {
+      "label": "Grafică pe Calculator",
+      "ciclu": "gimnaziu",
+      "icon": "🖼️",
+      "color": "#d4edda",
+      "extensii_imagine": true
+    },
+    "powerpoint": {
+      "label": "Prezentări PowerPoint",
+      "ciclu": "gimnaziu",
+      "icon": "📊",
+      "color": "#d1ecf1",
+      "extensii_imagine": false
+    },
+    "soft": {
+      "label": "Soft Educațional & Jocuri",
+      "ciclu": "gimnaziu",
+      "icon": "🎮",
+      "color": "#ede8fa",
+      "extensii_imagine": false
+    },
+    "web": {
+      "label": "Pagini Web",
+      "ciclu": "gimnaziu",
+      "icon": "🌐",
+      "color": "#e8f0fd",
+      "extensii_imagine": false
+    },
+    "scratch": {
+      "label": "Scratch & Alice",
+      "ciclu": "gimnaziu",
+      "icon": "🐱",
+      "color": "#fef2e2",
+      "extensii_imagine": false
+    },
+    "programare": {
+      "label": "Programare C++",
+      "ciclu": "direct",
+      "icon": "💻",
+      "color": "#e6f5ed",
+      "extensii_imagine": false
+    },
+    "robotica": {
+      "label": "Robotică",
+      "ciclu": "direct",
+      "icon": "🤖",
+      "color": "#fde8e8",
+      "extensii_imagine": true
+    }
+  },
+  "lucrari": [],
+  "rezultate": []
+}
