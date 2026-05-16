@@ -1,7 +1,7 @@
 {
-  "actualizat": "16.05.2026 18:16 UTC",
+  "actualizat": "16.05.2026 19:14 UTC",
   "stats": {
-    "total_lucrari": 45,
+    "total_lucrari": 46,
     "total_imagini": 39,
     "total_rezultate": 0,
     "total_sectiuni": 8
@@ -413,6 +413,14 @@
       "fisier": "PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
       "cale": "lucrari/powerpoint/PPT_AL.I.CUZA_DAMIAN_LEPADATU.pdf",
       "titlu": "Al.I.Cuza Damian Lepadatu",
+      "sectiune": "powerpoint",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "Sirmachi Daria_CN C alistrat Hogas Tecuci_prof. Ionita Doina.pdf",
+      "cale": "lucrari/powerpoint/Sirmachi Daria_CN C alistrat Hogas Tecuci_prof. Ionita Doina.pdf",
+      "titlu": "Sirmachi Daria Cn C Alistrat Hogas Tecuci Prof. Ionita Doina",
       "sectiune": "powerpoint",
       "este_imagine": false,
       "extensie": "pdf"
