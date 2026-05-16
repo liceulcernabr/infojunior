@@ -1,8 +1,8 @@
 {
-  "actualizat": "16.05.2026 16:55 UTC",
+  "actualizat": "16.05.2026 16:58 UTC",
   "stats": {
-    "total_lucrari": 22,
-    "total_imagini": 22,
+    "total_lucrari": 42,
+    "total_imagini": 41,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -240,6 +240,166 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "jpg"
+    },
+    {
+      "fisier": "GRAFICA_A_S_Puskin_Fotea_Luca_Mario.png",
+      "cale": "lucrari/grafica/GRAFICA_A_S_Puskin_Fotea_Luca_Mario.png",
+      "titlu": "A S Puskin Fotea Luca Mario",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_A_S_Puskin_Gavrila_Tatiana.png",
+      "cale": "lucrari/grafica/GRAFICA_A_S_Puskin_Gavrila_Tatiana.png",
+      "titlu": "A S Puskin Gavrila Tatiana",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_A_S_Puskin_Hurmuzache_Flavius_Ionel.png",
+      "cale": "lucrari/grafica/GRAFICA_A_S_Puskin_Hurmuzache_Flavius_Ionel.png",
+      "titlu": "A S Puskin Hurmuzache Flavius Ionel",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_A_S_Puskin_Paraschiv_Andra_Gabriela.png",
+      "cale": "lucrari/grafica/GRAFICA_A_S_Puskin_Paraschiv_Andra_Gabriela.png",
+      "titlu": "A S Puskin Paraschiv Andra Gabriela",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_C.N “Ana Aslan”_Pârvu_Robert.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_C.N “Ana Aslan”_Pârvu_Robert.jpeg",
+      "titlu": "C.N “Ana Aslan” Pârvu Robert",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
+    },
+    {
+      "fisier": "GRAFICA_F_Neagu_Stefan_Clara_Maria.png",
+      "cale": "lucrari/grafica/GRAFICA_F_Neagu_Stefan_Clara_Maria.png",
+      "titlu": "F Neagu Stefan Clara Maria",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_LTIB_STANCIULESCU_ERIC.jpg",
+      "cale": "lucrari/grafica/GRAFICA_LTIB_STANCIULESCU_ERIC.jpg",
+      "titlu": "Ltib Stanciulescu Eric",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Bajenaru _Ioana Denisa.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Bajenaru _Ioana Denisa.jpeg",
+      "titlu": "Scoala Gimnazială Alexandru Vlahuţă Gugeşti Bajenaru  Ioana Denisa",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
+    },
+    {
+      "fisier": "GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Popa _Lavinia_Ionelia.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Popa _Lavinia_Ionelia.jpeg",
+      "titlu": "Scoala Gimnazială Alexandru Vlahuţă Gugeşti Popa  Lavinia Ionelia",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
+    },
+    {
+      "fisier": "GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Stănescu_ Izabela Teodora.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Stănescu_ Izabela Teodora.jpeg",
+      "titlu": "Scoala Gimnazială Alexandru Vlahuţă Gugeşti Stănescu  Izabela Teodora",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
+    },
+    {
+      "fisier": "Marin Andreea Miruna cls 5B + (1).jpg",
+      "cale": "lucrari/grafica/Marin Andreea Miruna cls 5B + (1).jpg",
+      "titlu": "Marin Andreea Miruna Cls 5B + (1)",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Marin Andreea Miruna cls 5B +.jpg",
+      "cale": "lucrari/grafica/Marin Andreea Miruna cls 5B +.jpg",
+      "titlu": "Marin Andreea Miruna Cls 5B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Mehedinti David Alexandru clasa 5 B +.jpg",
+      "cale": "lucrari/grafica/Mehedinti David Alexandru clasa 5 B +.jpg",
+      "titlu": "Mehedinti David Alexandru Clasa 5 B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Nadia Cristea (clasa a-3a).png",
+      "cale": "lucrari/grafica/Nadia Cristea (clasa a-3a).png",
+      "titlu": "Nadia Cristea (Clasa A 3A)",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Pavel Daria Stefania(3).png",
+      "cale": "lucrari/grafica/Pavel Daria Stefania(3).png",
+      "titlu": "Pavel Daria Stefania(3)",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "STEFAN IANIS CLS A5 +.jpg",
+      "cale": "lucrari/grafica/STEFAN IANIS CLS A5 +.jpg",
+      "titlu": "Stefan Ianis Cls A5 +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
+      "fisier": "Sirmachi Daria_CN C alistrat Hogas Tecuci_prof. Ionita Doina.pptx",
+      "cale": "lucrari/grafica/Sirmachi Daria_CN C alistrat Hogas Tecuci_prof. Ionita Doina.pptx",
+      "titlu": "Sirmachi Daria Cn C Alistrat Hogas Tecuci Prof. Ionita Doina",
+      "sectiune": "grafica",
+      "este_imagine": false,
+      "extensie": "pptx"
+    },
+    {
+      "fisier": "Stancu Alexandra 5 B +.png",
+      "cale": "lucrari/grafica/Stancu Alexandra 5 B +.png",
+      "titlu": "Stancu Alexandra 5 B +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "Vasilache Andreea clasa a 5 a +.png",
+      "cale": "lucrari/grafica/Vasilache Andreea clasa a 5 a +.png",
+      "titlu": "Vasilache Andreea Clasa A 5 A +",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "unnamed.png",
+      "cale": "lucrari/grafica/unnamed.png",
+      "titlu": "Unnamed",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
     }
   ],
   "rezultate": []
