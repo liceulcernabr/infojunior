@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfoJunior – Concurs Interjudețean de Creativitate în Domeniul IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1a56c4;--blue-light:#e8f0fd;--yellow:#f5c200;--yellow-dark:#c49500;--red:#e02020;--green:#1b8a50;--green-light:#e6f5ed;--purple:#6b3fc0;--purple-light:#ede8fa;--orange:#e06b00;--orange-light:#fef2e2;--bg:#f4f7ff;--white:#ffffff;--text:#1a1f3a;--muted:#5a6287;--border:#d4daf0;--radius:14px;--radius-sm:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+nav{background:var(--blue);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(26,86,196,.18)}
+.nav-logo{font-size:1.35rem;font-weight:900;color:#fff;letter-spacing:-.5px}
+.nav-logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--yellow)}
+.hero{background:linear-gradient(135deg,#1a3a8c 0%,#1a56c4 50%,#2066d4 100%);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:var(--yellow);font-size:.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.35rem 1rem;border-radius:999px;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.6rem}
+.hero h1 span{color:var(--yellow)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 1.2rem}
+.hero-school{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2.5rem;font-style:italic}
+.hero-steam{display:flex;justify-content:center;gap:8px;margin-bottom:2.5rem}
+.steam-pill{padding:.4rem .9rem;border-radius:999px;font-size:.85rem;font-weight:800;letter-spacing:1px}
+.s1{background:#e02020;color:#fff}.s2{background:#f5c200;color:#2a1a00}.s3{background:#1b8a50;color:#fff}.s4{background:#6b3fc0;color:#fff}.s5{background:#e06b00;color:#fff}
+section{max-width:1100px;margin:0 auto;padding:3rem 1.5rem}
+.section-title{font-size:1.6rem;font-weight:900;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.section-title .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);display:inline-block;flex-shrink:0}
+.stats-bar{background:var(--white);border-radius:var(--radius);border:1.5px solid var(--border);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin-bottom:2.5rem;overflow:hidden}
+.stat-cell{padding:1.4rem;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-size:2rem;font-weight:900;color:var(--blue);font-family:'Space Mono',monospace;line-height:1}
+.stat-label{font-size:.8rem;color:var(--muted);font-weight:600;margin-top:.3rem}
+.sectiuni-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.sectiune-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.4rem;transition:transform .2s,box-shadow .2s;cursor:default}
+.sectiune-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(26,86,196,.12)}
+.sectiune-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
+.sectiune-card h3{font-size:1rem;font-weight:800;margin-bottom:.4rem}
+.sectiune-card p{font-size:.87rem;color:var(--muted);line-height:1.5}
+.tag-ciclu{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:999px;margin-bottom:.6rem}
+.primar{background:#fff3cd;color:#7a4e00}.gimnaziu{background:#d4edda;color:#155724}.direct{background:#d1ecf1;color:#0c5460}
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:2rem}
+.tab-btn{background:none;border:none;padding:.85rem 1.4rem;font-family:'Nunito',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.pdf-list{display:flex;flex-direction:column;gap:.75rem}
+.pdf-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;transition:box-shadow .2s}
+.pdf-item:hover{box-shadow:0 4px 16px rgba(26,86,196,.1)}
+.pdf-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.pdf-info{flex:1}.pdf-info h4{font-size:.95rem;font-weight:800}.pdf-info p{font-size:.8rem;color:var(--muted)}
+.pdf-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.gallery-filter{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filter-btn{background:var(--white);border:1.5px solid var(--border);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;color:var(--text)}
+.filter-btn:hover,.filter-btn.active{background:var(--blue);border-color:var(--blue);color:white}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.gallery-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.gallery-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,86,196,.13)}
+.gallery-thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg);cursor:zoom-in}
+.gallery-meta{padding:.75rem}
+.gallery-meta h4{font-size:.88rem;font-weight:800;margin-bottom:2px}
+.gallery-meta p{font-size:.78rem;color:var(--muted)}
+.gallery-category{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:999px;margin-bottom:.35rem}
+.lucrari-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.lucrare-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s}
+.lucrare-card:hover{box-shadow:0 4px 16px rgba(26,86,196,.1)}
+.lucrare-icon{font-size:2rem}
+.lucrare-card h4{font-size:.93rem;font-weight:800}
+.lucrare-card p{font-size:.8rem;color:var(--muted);flex:1}
+.btn{padding:.45rem 1rem;border-radius:var(--radius-sm);font-size:.85rem;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;border:none;transition:opacity .2s;text-decoration:none;display:inline-block}
+.btn:hover{opacity:.85}
+.btn-primary{background:var(--blue);color:white}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-sm{padding:.3rem .75rem;font-size:.8rem}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--muted)}
+.empty-state .ei{font-size:3rem;margin-bottom:1rem}
+.pdf-viewer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:2rem}
+.pdf-viewer-overlay.open{display:flex}
+.pdf-viewer-box{background:white;border-radius:var(--radius);width:100%;max-width:900px;height:85vh;display:flex;flex-direction:column;overflow:hidden}
+.pdf-viewer-header{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.pdf-viewer-header h3{font-size:1rem;font-weight:800}
+.pdf-viewer-close{background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--muted);line-height:1}
+.pdf-viewer-iframe{flex:1;border:none;width:100%}
+.lightbox-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center}
+.lightbox-overlay.open{display:flex}
+.lightbox-img{max-width:92vw;max-height:88vh;border-radius:var(--radius);object-fit:contain}
+.lightbox-close{position:fixed;top:1.5rem;right:2rem;background:none;border:none;color:white;font-size:2rem;cursor:pointer;line-height:1}
+footer{background:var(--text);color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.9rem}
+footer a{color:var(--yellow);text-decoration:none}
+footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
+.actualizat-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.25rem .85rem;font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.75rem}
+.loading{text-align:center;padding:3rem;color:var(--muted);font-size:.95rem}
+@media(max-width:768px){
+  nav{padding:0 1rem}
+  .nav-links{display:none}
+  .hero{padding:2.5rem 1rem 2rem}
+  .hero h1{font-size:2.4rem}
+  section{padding:1.5rem 1rem}
+  .section-title{font-size:1.2rem}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-cell{border-right:none;border-bottom:1px solid var(--border);padding:1rem}
+  .stat-cell:nth-child(odd){border-right:1px solid var(--border)}
+  .stat-cell:last-child{border-bottom:none}
+  .sectiuni-grid{grid-template-columns:1fr}
+  .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .tab-btn{white-space:nowrap;font-size:.82rem;padding:.75rem .9rem;flex-shrink:0}
+  .pdf-item{flex-wrap:wrap}
+  .pdf-actions{flex-direction:row;flex-wrap:wrap;width:100%}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .lucrari-grid{grid-template-columns:1fr}
+  .pdf-viewer-box{height:92vh;margin:.5rem}
+  .contact-grid{grid-template-columns:1fr !important}
+  .afis-inner{flex-direction:column}
+  .afis-img{max-width:100% !important}
+}
+@media(max-width:400px){
+  .gallery-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Info<span>Junior</span></div>
+  <div class="nav-links">
+    <a href="#afis">Afișul</a>
+    <a href="#sectiuni">Secțiuni</a>
+    <a href="#rezultate">Rezultate</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Concurs Interjudețean STEAM</div>
+  <h1>Info<span>Junior</span></h1>
+  <p class="hero-sub">Concurs interjudețean de creativitate în domeniul IT</p>
+  <p class="hero-school">Liceul Teoretic "Panait Cerna" Brăila</p>
+  <div class="hero-steam">
+    <span class="steam-pill s1">S</span>
+    <span class="steam-pill s2">T</span>
+    <span class="steam-pill s3">E</span>
+    <span class="steam-pill s4">A</span>
+    <span class="steam-pill s5">M</span>
+  </div>
+  <div class="actualizat-badge" id="actualizatBadge">🕐 Se încarcă...</div>
+</div>
+
+<!-- AFIS -->
+<section id="afis">
+  <div class="section-title"><span class="dot" style="background:var(--yellow-dark)"></span> Afișul concursului</div>
+  <div class="afis-inner" style="display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;">
+    <div class="afis-img" style="flex:0 0 auto;max-width:320px;width:100%;">
+      <img id="posterImg" src="InfoJunior.png" alt="Afișul concursului InfoJunior"
+           style="width:100%;border-radius:var(--radius);border:1.5px solid var(--border);box-shadow:0 8px 32px rgba(26,86,196,.13);cursor:zoom-in;display:block;"
+           onclick="openLightbox(this.src)">
+      <div style="margin-top:.75rem;display:flex;gap:.5rem;justify-content:center;">
+        <button class="btn btn-primary btn-sm" onclick="openLightbox(document.getElementById('posterImg').src)">🔍 Mărește</button>
+        <a id="posterDownload" href="" download="afis-infojunior.png" class="btn btn-outline btn-sm">⬇️ Descarcă</a>
+      </div>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:1rem;color:var(--blue);">Despre concurs</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;margin-bottom:1rem;">
+        <strong style="color:var(--text);">InfoJunior</strong> este un concurs interjudețean de creativitate în domeniul IT cu tema STEAM, organizat de Liceul Teoretic „Panait Cerna" Brăila, înscris în lista proiectelor de educație extrașcolară interjudețene.
+      </p>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;margin-bottom:1rem;">
+        Concursul vizează elevi din <strong style="color:var(--text);">învățământul primar și gimnazial</strong> și își propune ridicarea nivelului de pregătire în informatică și TIC, dezvoltarea creativității și a spiritului competitiv.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:.5rem;">
+        <div style="background:var(--blue-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">🏆 <strong>Premii:</strong> Premiul I, II, III + Mențiuni — pentru fiecare secțiune</div>
+        <div style="background:var(--green-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">🎓 <strong>Diplome</strong> pentru toți participanții</div>
+        <div style="background:var(--orange-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">📧 <strong>Contact:</strong> <a href="mailto:infojuniorbraila@gmail.com" style="color:var(--blue);">infojuniorbraila@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTIUNI -->
+<section id="sectiuni">
+  <div class="stats-bar">
+    <div class="stat-cell"><div class="stat-num" id="sLucrari">—</div><div class="stat-label">Lucrări</div></div>
+    <div class="stat-cell"><div class="stat-num" id="sImagini">—</div><div class="stat-label">Imagini</div></div>
+    <div class="stat-cell"><div class="stat-num" id="sRezultate">—</div><div class="stat-label">Rezultate PDF</div></div>
+    <div class="stat-cell"><div class="stat-num">8</div><div class="stat-label">Secțiuni</div></div>
+  </div>
+  <div class="section-title"><span class="dot"></span> Secțiunile concursului</div>
+  <div class="sectiuni-grid" id="sectiuniGrid">
+    <div class="loading">Se încarcă secțiunile...</div>
+  </div>
+</section>
+
+<!-- REZULTATE + GALERIE + LUCRARI -->
+<section id="rezultate">
+  <div class="section-title"><span class="dot" style="background:var(--red)"></span> Rezultate, Galerie & Lucrări</div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('tRezultate',this)">📄 Rezultate PDF</button>
+    <button class="tab-btn" onclick="switchTab('tGalerie',this)">🖼️ Galerie</button>
+    <button class="tab-btn" onclick="switchTab('tPowerPoint',this)">📊 Prezentări</button>
+    <button class="tab-btn" onclick="switchTab('tVideos',this)">🤖 Robotică Video</button>
+    <button class="tab-btn" onclick="switchTab('tLucrari',this)">📁 Toate Lucrările</button>
+  </div>
+
+  <!-- REZULTATE -->
+  <div class="tab-panel active" id="tRezultate">
+    <div class="pdf-list" id="pdfList">
+      <div class="loading">Se încarcă rezultatele...</div>
+    </div>
+  </div>
+
+  <!-- GALERIE -->
+  <div class="tab-panel" id="tGalerie" id="galerie">
+    <div class="gallery-filter" id="galleryFilter">
+      <button class="filter-btn active" onclick="filterGallery('all',this)">Toate</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="loading" style="grid-column:1/-1">Se încarcă galeria...</div>
+    </div>
+  </div>
+
+  <!-- POWERPOINT PDF -->
+  <div class="tab-panel" id="tPowerPoint">
+    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:3rem 2rem;text-align:center;">
+      <div style="font-size:3.5rem;margin-bottom:1rem;">📊</div>
+      <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:.6rem;color:var(--text);">Prezentări PowerPoint</h3>
+      <p style="color:var(--muted);font-size:.95rem;max-width:420px;margin:0 auto 2rem;line-height:1.7;">
+        Toate prezentările elevilor sunt disponibile pe Google Drive. Dă click pe butonul de mai jos pentru a le vizualiza sau descărca.
+      </p>
+      <a href="https://drive.google.com/drive/folders/1FbE15XD0vIjhTbUz6ljNPTLgKW_sl1MK?usp=sharing"
+         target="_blank"
+         style="display:inline-flex;align-items:center;gap:.6rem;background:var(--blue);color:white;font-weight:800;font-size:1rem;padding:.85rem 2rem;border-radius:var(--radius);text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 87.3 78" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z"/><path d="M43.65 25L29.9 1.2C28.55.4 27 0 25.45 0c-1.55 0-3.1.4-4.45 1.2L6.6 25h37.05z"/><path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75L86.1 57.5c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.75z"/><path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.95 0H34.35c-1.55 0-3.1.4-4.45 1.2z"/><path d="M59.8 53H27.5L13.75 76.8c1.35.8 2.9 1.2 4.45 1.2h50.8c1.55 0 3.1-.4 4.45-1.2z"/><path d="M73.4 26.5l-6.9-11.95c-1.35-.8-2.9-1.2-4.45-1.2H57.4L43.65 37.7 59.8 53h26.5c0-1.55-.4-3.1-1.2-4.5z"/></svg>
+        Deschide în Google Drive
+      </a>
+      <p style="margin-top:1.5rem;font-size:.8rem;color:var(--muted);">Se deschide într-o fereastră nouă · Nu necesită cont Google</p>
+    </div>
+  </div>
+
+  <!-- VIDEOS ROBOTICA -->
+  <div class="tab-panel" id="tVideos">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;" id="videoGrid"></div>
+  </div>
+
+  <!-- LUCRARI -->
+  <div class="tab-panel" id="tLucrari">
+    <div class="lucrari-grid" id="lucrariGrid">
+      <div class="loading" style="grid-column:1/-1">Se încarcă lucrările...</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0;">
+  <div class="section-title"><span class="dot" style="background:var(--green)"></span> Contact & Informații</div>
+  <div style="background:var(--white);border-radius:var(--radius);border:1.5px solid var(--border);padding:2rem;display:grid" class="contact-grid;grid-template-columns:1fr 1fr;gap:2rem;">
+    <div>
+      <h3 style="font-weight:800;margin-bottom:.75rem;">Organizator</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;">
+        📍 Liceul Teoretic "Panait Cerna" Brăila<br>
+        📧 <a href="mailto:infojuniorbraila@gmail.com" style="color:var(--blue);font-weight:700;">infojuniorbraila@gmail.com</a><br>
+        🏆 Premii: Premiul I, II, III + Mențiuni per secțiune<br>
+        📜 Diplome pentru toți participanții
+      </p>
+    </div>
+    <div>
+      <h3 style="font-weight:800;margin-bottom:.75rem;">Concursul în cifre</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;">
+        🎯 Poziția 321 în lista proiectelor OMEC<br>
+        📚 Cicluri: primar și gimnazial<br>
+        🗺️ Nivel: interjudețean<br>
+        🔗 <a href="https://forms.gle/gXKGEywmBPNQwfnf9" target="_blank" style="color:var(--blue);font-weight:700;">Formular de înscriere</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="ft">InfoJunior – Concurs Interjudețean de Creativitate în Domeniul IT</p>
+  <p>Liceul Teoretic "Panait Cerna" Brăila · <a href="mailto:infojuniorbraila@gmail.com">infojuniorbraila@gmail.com</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;opacity:.6;" id="footerActualizat"></p>
+</footer>
+
+<!-- PDF VIEWER -->
+<div class="pdf-viewer-overlay" id="pdfViewer">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <h3 id="pdfViewerTitle">Rezultate</h3>
+      <button class="pdf-viewer-close" onclick="closePdfViewer()">✕</button>
+    </div>
+    <iframe class="pdf-viewer-iframe" id="pdfViewerFrame" src=""></iframe>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────────────────────
+var SECTIUNI_INFO = {
+  basme:       {label:'Lumea Basmelor',       ciclu:'primar',   icon:'🎨', color:'#fff3cd', desc:'Desen în Paint inspirat din basme — Scufița Roșie, Alba ca Zăpada, Dumbrava Minunată, Sarea în Bucate, Amintiri din Copilărie. Cls. preg.–IV.'},
+  grafica:     {label:'Grafică pe Calculator', ciclu:'gimnaziu', icon:'🖼️', color:'#d4edda', desc:'Desene și pliante A4 sau afișe A3 pe temele: Sigla InfoJunior, Protejăm Natura, Bibliotecă Virtuală, Inteligența Artificială.'},
+  powerpoint:  {label:'Prezentări PowerPoint', ciclu:'gimnaziu', icon:'📊', color:'#d1ecf1', desc:'10–20 diapozitive pe teme ca Vizită în Orașul Natal, SOS Natura, Pasiuni & Hobby-uri, Educația STEAM.'},
+  soft:        {label:'Soft Educațional & Jocuri', ciclu:'gimnaziu', icon:'🎮', color:'#ede8fa', desc:'Aplicații și jocuri educative — evaluate după originalitate, creativitate și complexitate.'},
+  web:         {label:'Pagini Web',            ciclu:'gimnaziu', icon:'🌐', color:'#e8f0fd', desc:'Site-uri web realizate individual sau în echipă, evaluate după originalitate, creativitate și complexitate.'},
+  scratch:     {label:'Scratch & Alice',        ciclu:'gimnaziu', icon:'🐱', color:'#fef2e2', desc:'Proiecte de programare vizuală — platformele Scratch și Alice.'},
+  programare:  {label:'Programare C++',         ciclu:'direct',   icon:'💻', color:'#e6f5ed', desc:'Participare directă. Rezolvarea a două probleme în C++ în 3 ore.'},
+  robotica:    {label:'Robotică',               ciclu:'direct',   icon:'🤖', color:'#fde8e8', desc:'Construirea unui robot autonom care execută o sarcină specifică.'},
+};
+var CAT_COLORS = {
+  primar:  {bg:'#fff3cd',color:'#7a4e00'},
+  gimnaziu:{bg:'#d4edda',color:'#155724'},
+  direct:  {bg:'#d1ecf1',color:'#0c5460'},
+};
+var EXT_ICONS = {pdf:'📄',pptx:'📊',ppt:'📊',sb3:'🐱',html:'🌐',htm:'🌐',zip:'📦',mp4:'🎬',avi:'🎬'};
+
+var allLucrari = [];
+var currentFilter = 'all';
+
+// ── Videos Robotică ───────────────────────────────────────────────────────────
+var VIDEOS = [
+  {id:'ww665cSDCK4', tip:'shorts', titlu:'Robot Autonom 1'},
+  {id:'28qmWFMiHys', tip:'shorts', titlu:'Robot Autonom 2'},
+  {id:'LwWmjlD-XzE', tip:'shorts', titlu:'Robot Autonom 3'},
+  {id:'iM3kYyJkVOY', tip:'shorts', titlu:'Robot Autonom 4'},
+  {id:'bzB4ZMcYjuk', tip:'video',  titlu:'Robot Autonom 5'},
+];
+
+function renderVideos(){
+  var el = document.getElementById('videoGrid');
+  el.innerHTML = VIDEOS.map(function(v){
+    var ytUrl = v.tip === 'shorts'
+      ? 'https://youtube.com/shorts/' + v.id
+      : 'https://youtu.be/' + v.id;
+    var thumb = 'https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg';
+    return '<div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform=\'translateY(-3px)\';this.style.boxShadow=\'0 8px 24px rgba(26,86,196,.13)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">'
+      + '<a href="'+ytUrl+'" target="_blank" style="display:block;position:relative;text-decoration:none;">'
+      + '<img src="'+thumb+'" alt="'+esc(v.titlu)+'" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy">'
+      + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);">'
+      + '<div style="width:56px;height:56px;background:#ff0000;border-radius:50%;display:flex;align-items:center;justify-content:center;">'
+      + '<svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>'
+      + '</div></div></a>'
+      + '<div style="padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;">'
+      + '<span style="font-size:.9rem;font-weight:800;">🤖 '+esc(v.titlu)+'</span>'
+      + '<a href="'+ytUrl+'" target="_blank" style="font-size:.78rem;color:var(--blue);font-weight:700;text-decoration:none;">Vezi pe YouTube ↗</a>'
+      + '</div></div>';
+  }).join('');
+}
+renderVideos();
+
+// ── Poster ────────────────────────────────────────────────────────────────────
+document.getElementById('posterImg').src = 'InfoJunior.png';
+document.getElementById('posterDownload').href = 'InfoJunior.png';
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Fetch data.json ───────────────────────────────────────────────────────────
+fetch('data.json?v=' + Date.now())
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    renderStats(data.stats);
+    renderBadge(data.actualizat);
+    renderSectiuni();
+    renderRezultate(data.rezultate || []);
+    allLucrari = data.lucrari || [];
+    buildGalleryFilters(allLucrari);
+    renderGallery('all');
+    renderLucrari(allLucrari);
+  })
+  .catch(function(){ renderError(); });
+
+function renderError(){
+  document.getElementById('sLucrari').textContent='—';
+  document.getElementById('pdfList').innerHTML = '<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;">Revino pe site după finalizarea concursului.</p></div>';
+  document.getElementById('galleryGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">🎨</div><p style="font-weight:800;">Galeria se pregătește!</p><p style="font-size:.88rem;margin-top:.4rem;">Lucrările vor apărea în curând.</p></div>';
+  document.getElementById('lucrariGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">📁</div><p style="font-weight:800;">Lucrările vor apărea în curând!</p></div>';
+  renderSectiuni();
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────────────
+function renderStats(s){
+  document.getElementById('sLucrari').textContent = s.total_lucrari;
+  document.getElementById('sImagini').textContent = s.total_imagini;
+  document.getElementById('sRezultate').textContent = s.total_rezultate;
+}
+function renderBadge(ts){
+  document.getElementById('actualizatBadge').textContent = '🕐 Actualizat: ' + ts;
+  document.getElementById('footerActualizat').textContent = 'Ultima actualizare: ' + ts;
+}
+
+// ── Sectiuni ─────────────────────────────────────────────────────────────────
+function renderSectiuni(){
+  var grid = document.getElementById('sectiuniGrid');
+  grid.innerHTML = Object.keys(SECTIUNI_INFO).map(function(key){
+    var s = SECTIUNI_INFO[key];
+    var cc = CAT_COLORS[s.ciclu] || CAT_COLORS.direct;
+    var label = s.ciclu === 'primar' ? 'Primar' : s.ciclu === 'gimnaziu' ? 'Gimnaziu' : 'Direct';
+    return '<div class="sectiune-card">'
+      + '<span class="tag-ciclu" style="background:'+cc.bg+';color:'+cc.color+'">'+label+'</span>'
+      + '<div class="sectiune-icon" style="background:'+s.color+'">'+s.icon+'</div>'
+      + '<h3>'+s.label+'</h3>'
+      + '<p>'+s.desc+'</p>'
+      + '</div>';
+  }).join('');
+}
+
+// ── Rezultate PDF ─────────────────────────────────────────────────────────────
+function renderRezultate(rezultate){
+  var el = document.getElementById('pdfList');
+  if(!rezultate.length){
+    el.innerHTML='<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor fi publicate în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Revino pe site după finalizarea concursului.</p></div>';
+    return;
+  }
+  el.innerHTML = rezultate.map(function(r,i){
+    return '<div class="pdf-item">'
+      +'<div class="pdf-icon" style="background:#fde8e8">📄</div>'
+      +'<div class="pdf-info"><h4>'+esc(r.titlu)+'</h4><p>'+esc(r.fisier)+'</p></div>'
+      +'<div class="pdf-actions">'
+      +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(r.cale)+'\',\''+esc(r.titlu)+'\')">Vizualizare</button>'
+      +'<a href="'+esc(r.cale)+'" download="'+esc(r.fisier)+'" class="btn btn-outline btn-sm">Descarcă</a>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Prezentări PowerPoint PDF ─────────────────────────────────────────────────
+function renderPowerPoint(lucrari){
+  var el = document.getElementById('pptList');
+  var pdfuri = lucrari.filter(function(l){ return l.sectiune === 'powerpoint' && l.extensie === 'pdf'; });
+  if(!pdfuri.length){
+    el.innerHTML='<div class="empty-state"><div class="ei">📊</div><p style="font-weight:800;">Prezentările vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Încarcă fișierele PDF în folderul <code>lucrari/powerpoint/</code>.</p></div>';
+    return;
+  }
+  el.innerHTML = pdfuri.map(function(p, i){
+    return '<div class="pdf-item" style="flex-wrap:wrap;gap:.75rem;">'
+      +'<div class="pdf-icon" style="background:#d1ecf1;">📊</div>'
+      +'<div class="pdf-info" style="flex:1;min-width:180px;"><h4>'+esc(p.titlu)+'</h4><p>'+esc(p.fisier)+'</p></div>'
+      +'<div class="pdf-actions">'
+      +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(p.cale)+'\',\''+esc(p.titlu)+'\')">👁️ Vizualizare</button>'
+      +'<a href="'+esc(p.cale)+'" download="'+esc(p.fisier)+'" class="btn btn-outline btn-sm">⬇️ Descarcă</a>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Gallery ───────────────────────────────────────────────────────────────────
+var CAT_LABEL_COLORS = {
+  basme:      {bg:'#fff3cd',color:'#7a4e00'},
+  grafica:    {bg:'#d4edda',color:'#155724'},
+  powerpoint: {bg:'#d1ecf1',color:'#0c5460'},
+  soft:       {bg:'#ede8fa',color:'#3c1f8a'},
+  web:        {bg:'#e8f0fd',color:'#1a3a8c'},
+  scratch:    {bg:'#fef2e2',color:'#7a3a00'},
+  programare: {bg:'#e6f5ed',color:'#155724'},
+  robotica:   {bg:'#fde8e8',color:'#7a0000'},
+};
+
+function buildGalleryFilters(lucrari){
+  var imagini = lucrari.filter(function(l){return l.este_imagine});
+  var cats = {};
+  imagini.forEach(function(l){ cats[l.sectiune] = true; });
+  var f = document.getElementById('galleryFilter');
+  Object.keys(cats).forEach(function(cat){
+    var s = SECTIUNI_INFO[cat] || {};
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.textContent = (s.icon||'') + ' ' + (s.label||cat);
+    btn.onclick = function(){ filterGallery(cat, btn); };
+    f.appendChild(btn);
+  });
+}
+
+function filterGallery(cat, btn){
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  renderGallery(cat);
+}
+
+function renderGallery(cat){
+  var imagini = allLucrari.filter(function(l){return l.este_imagine && (cat==='all'||l.sectiune===cat)});
+  var el = document.getElementById('galleryGrid');
+  if(!imagini.length){
+    el.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="ei">🎨</div><p style="font-weight:600">Nicio imagine în această categorie.</p><p style="font-size:.85rem;margin-top:.3rem">Adaugă imagini în folderul secțiunii și dă push.</p></div>';
+    return;
+  }
+  el.innerHTML = imagini.map(function(img){
+    var cc = CAT_LABEL_COLORS[img.sectiune] || {bg:'#e8f0fd',color:'#1a3a8c'};
+    var s = SECTIUNI_INFO[img.sectiune] || {};
+    return '<div class="gallery-item">'
+      +'<img class="gallery-thumb" src="'+esc(img.cale)+'" alt="'+esc(img.titlu)+'" loading="lazy" onclick="openLightbox(\''+esc(img.cale)+'\')">'
+      +'<div class="gallery-meta">'
+      +'<span class="gallery-category" style="background:'+cc.bg+';color:'+cc.color+'">'+(s.label||img.sectiune)+'</span>'
+      +'<h4>'+esc(img.titlu)+'</h4>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Lucrari ───────────────────────────────────────────────────────────────────
+function renderLucrari(lucrari){
+  var el = document.getElementById('lucrariGrid');
+  if(!lucrari.length){
+    el.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="ei">📁</div><p style="font-weight:600">Nicio lucrare încărcată.</p><p style="font-size:.85rem;margin-top:.3rem">Adaugă fișiere în folderele din <code>lucrari/</code> și dă push.</p></div>';
+    return;
+  }
+  el.innerHTML = lucrari.map(function(l){
+    var icon = EXT_ICONS[l.extensie] || '📁';
+    var s = SECTIUNI_INFO[l.sectiune] || {};
+    var cc = CAT_LABEL_COLORS[l.sectiune] || {bg:'#e8f0fd',color:'#1a3a8c'};
+    return '<div class="lucrare-card">'
+      +'<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.25rem">'
+      +'<span class="lucrare-icon">'+icon+'</span>'
+      +'<span class="gallery-category" style="background:'+cc.bg+';color:'+cc.color+'">'+(s.label||l.sectiune)+'</span>'
+      +'</div>'
+      +'<h4>'+esc(l.titlu)+'</h4>'
+      +'<p style="font-size:.78rem;color:var(--muted)">'+esc(l.fisier)+'</p>'
+      +'<a href="'+esc(l.cale)+'" download="'+esc(l.fisier)+'" class="btn btn-outline btn-sm" style="align-self:flex-start">⬇️ Descarcă</a>'
+      +'</div>';
+  }).join('');
+}
+
+// ── PDF Viewer ────────────────────────────────────────────────────────────────
+function openPdf(cale, titlu){
+  document.getElementById('pdfViewerTitle').textContent = titlu;
+  document.getElementById('pdfViewerFrame').src = cale;
+  document.getElementById('pdfViewer').classList.add('open');
+}
+function closePdfViewer(){
+  document.getElementById('pdfViewer').classList.remove('open');
+  document.getElementById('pdfViewerFrame').src='';
+}
+
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// ── Utils ─────────────────────────────────────────────────────────────────────
+function esc(s){ var d=document.createElement('div');d.textContent=String(s);return d.innerHTML; }
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePdfViewer();closeLightbox();}});
+</script>
+</body>
+</html>
