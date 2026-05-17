@@ -173,6 +173,7 @@ footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('tRezultate',this)">📄 Rezultate PDF</button>
     <button class="tab-btn" onclick="switchTab('tGalerie',this)">🖼️ Galerie</button>
+    <button class="tab-btn" onclick="switchTab('tPowerPoint',this)">📊 Prezentări</button>
     <button class="tab-btn" onclick="switchTab('tVideos',this)">🤖 Robotică Video</button>
     <button class="tab-btn" onclick="switchTab('tLucrari',this)">📁 Toate Lucrările</button>
   </div>
@@ -191,6 +192,13 @@ footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <div class="loading" style="grid-column:1/-1">Se încarcă galeria...</div>
+    </div>
+  </div>
+
+  <!-- POWERPOINT PDF -->
+  <div class="tab-panel" id="tPowerPoint">
+    <div class="pdf-list" id="pptList">
+      <div class="loading">Se încarcă prezentările...</div>
     </div>
   </div>
 
@@ -335,6 +343,7 @@ fetch('data.json?v=' + Date.now())
     allLucrari = data.lucrari || [];
     buildGalleryFilters(allLucrari);
     renderGallery('all');
+    renderPowerPoint(allLucrari);
     renderLucrari(allLucrari);
   })
   .catch(function(){ renderError(); });
@@ -388,6 +397,25 @@ function renderRezultate(rezultate){
       +'<div class="pdf-actions">'
       +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(r.cale)+'\',\''+esc(r.titlu)+'\')">Vizualizare</button>'
       +'<a href="'+esc(r.cale)+'" download="'+esc(r.fisier)+'" class="btn btn-outline btn-sm">Descarcă</a>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Prezentări PowerPoint PDF ─────────────────────────────────────────────────
+function renderPowerPoint(lucrari){
+  var el = document.getElementById('pptList');
+  var pdfuri = lucrari.filter(function(l){ return l.sectiune === 'powerpoint' && l.extensie === 'pdf'; });
+  if(!pdfuri.length){
+    el.innerHTML='<div class="empty-state"><div class="ei">📊</div><p style="font-weight:800;">Prezentările vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Încarcă fișierele PDF în folderul <code>lucrari/powerpoint/</code>.</p></div>';
+    return;
+  }
+  el.innerHTML = pdfuri.map(function(p, i){
+    return '<div class="pdf-item" style="flex-wrap:wrap;gap:.75rem;">'
+      +'<div class="pdf-icon" style="background:#d1ecf1;">📊</div>'
+      +'<div class="pdf-info" style="flex:1;min-width:180px;"><h4>'+esc(p.titlu)+'</h4><p>'+esc(p.fisier)+'</p></div>'
+      +'<div class="pdf-actions">'
+      +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(p.cale)+'\',\''+esc(p.titlu)+'\')">👁️ Vizualizare</button>'
+      +'<a href="'+esc(p.cale)+'" download="'+esc(p.fisier)+'" class="btn btn-outline btn-sm">⬇️ Descarcă</a>'
       +'</div></div>';
   }).join('');
 }
