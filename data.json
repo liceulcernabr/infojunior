@@ -1,8 +1,8 @@
 {
-  "actualizat": "18.05.2026 17:57 UTC",
+  "actualizat": "18.05.2026 17:58 UTC",
   "stats": {
-    "total_lucrari": 52,
-    "total_imagini": 44,
+    "total_lucrari": 55,
+    "total_imagini": 47,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -162,6 +162,14 @@
       "extensie": "png"
     },
     {
+      "fisier": "2 SOS Natura.jpg",
+      "cale": "lucrari/grafica/2 SOS Natura.jpg",
+      "titlu": "2 Sos Natura",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
+    },
+    {
       "fisier": "ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
       "cale": "lucrari/grafica/ADAUGĂ UN ANTET_20260508_222405_0000.jpg",
       "titlu": "Adaugă Un Antet 20260508 222405 0000",
@@ -176,6 +184,14 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "png"
+    },
+    {
+      "fisier": "AI.jpg",
+      "cale": "lucrari/grafica/AI.jpg",
+      "titlu": "Ai",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
     },
     {
       "fisier": "Aparece Stefan Daniel cl 5 B +.png",
@@ -392,6 +408,14 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "png"
+    },
+    {
+      "fisier": "SOS Natura.jpg",
+      "cale": "lucrari/grafica/SOS Natura.jpg",
+      "titlu": "Sos Natura",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpg"
     },
     {
       "fisier": "STEFAN IANIS CLS A5 +.jpg",
