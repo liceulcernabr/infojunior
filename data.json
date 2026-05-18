@@ -1,8 +1,8 @@
 {
-  "actualizat": "17.05.2026 08:16 UTC",
+  "actualizat": "18.05.2026 17:57 UTC",
   "stats": {
-    "total_lucrari": 47,
-    "total_imagini": 39,
+    "total_lucrari": 52,
+    "total_imagini": 44,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -296,6 +296,46 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "jpg"
+    },
+    {
+      "fisier": "GRAFICA_Sc.RaduTudoran_Branza_Gabriel.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_Sc.RaduTudoran_Branza_Gabriel.jpeg",
+      "titlu": "Sc.Radutudoran Branza Gabriel",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
+    },
+    {
+      "fisier": "GRAFICA_ScDimitrieCantemir_Balan_Kevin.png",
+      "cale": "lucrari/grafica/GRAFICA_ScDimitrieCantemir_Balan_Kevin.png",
+      "titlu": "Scdimitriecantemir Balan Kevin",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_ScDimitrieCantemir_Boeru_Antonia.png",
+      "cale": "lucrari/grafica/GRAFICA_ScDimitrieCantemir_Boeru_Antonia.png",
+      "titlu": "Scdimitriecantemir Boeru Antonia",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_ScDimitrieCantemir_Nichita_Liviu.png",
+      "cale": "lucrari/grafica/GRAFICA_ScDimitrieCantemir_Nichita_Liviu.png",
+      "titlu": "Scdimitriecantemir Nichita Liviu",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "GRAFICA_ScEcaterinaTeodoroiu_Cioacas_Ianis.jpeg",
+      "cale": "lucrari/grafica/GRAFICA_ScEcaterinaTeodoroiu_Cioacas_Ianis.jpeg",
+      "titlu": "Scecaterinateodoroiu Cioacas Ianis",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "jpeg"
     },
     {
       "fisier": "GRAFICA_Scoala Gimnazială Alexandru Vlahuţă Gugeşti_Bajenaru _Ioana Denisa.jpeg",
