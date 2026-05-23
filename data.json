@@ -1,7 +1,7 @@
 {
-  "actualizat": "23.05.2026 17:16 UTC",
+  "actualizat": "23.05.2026 17:22 UTC",
   "stats": {
-    "total_lucrari": 58,
+    "total_lucrari": 59,
     "total_imagini": 49,
     "total_rezultate": 0,
     "total_sectiuni": 8
@@ -469,6 +469,14 @@
       "fisier": "afis (80 x 120 cm) (1).pdf",
       "cale": "lucrari/grafica/afis (80 x 120 cm) (1).pdf",
       "titlu": "Afis (80 X 120 Cm) (1)",
+      "sectiune": "grafica",
+      "este_imagine": false,
+      "extensie": "pdf"
+    },
+    {
+      "fisier": "carte beesmart_compressed.pdf",
+      "cale": "lucrari/grafica/carte beesmart_compressed.pdf",
+      "titlu": "Carte Beesmart Compressed",
       "sectiune": "grafica",
       "este_imagine": false,
       "extensie": "pdf"
