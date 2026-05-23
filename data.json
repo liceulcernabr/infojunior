@@ -1,8 +1,8 @@
 {
-  "actualizat": "18.05.2026 17:58 UTC",
+  "actualizat": "23.05.2026 17:16 UTC",
   "stats": {
-    "total_lucrari": 55,
-    "total_imagini": 47,
+    "total_lucrari": 58,
+    "total_imagini": 49,
     "total_rezultate": 0,
     "total_sectiuni": 8
   },
@@ -208,6 +208,14 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "jpg"
+    },
+    {
+      "fisier": "BeeSmart.png",
+      "cale": "lucrari/grafica/BeeSmart.png",
+      "titlu": "Beesmart",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
     },
     {
       "fisier": "Beige and White Be Yourself Square Pillow_20260507_234624_0000.jpg",
@@ -448,6 +456,22 @@
       "sectiune": "grafica",
       "este_imagine": true,
       "extensie": "png"
+    },
+    {
+      "fisier": "afis (1).png",
+      "cale": "lucrari/grafica/afis (1).png",
+      "titlu": "Afis (1)",
+      "sectiune": "grafica",
+      "este_imagine": true,
+      "extensie": "png"
+    },
+    {
+      "fisier": "afis (80 x 120 cm) (1).pdf",
+      "cale": "lucrari/grafica/afis (80 x 120 cm) (1).pdf",
+      "titlu": "Afis (80 X 120 Cm) (1)",
+      "sectiune": "grafica",
+      "este_imagine": false,
+      "extensie": "pdf"
     },
     {
       "fisier": "Călatorie în Rio de Janeiro- Cotigă Iustin.pdf",
