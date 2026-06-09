@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfoJunior – Concurs Interjudețean de Creativitate în Domeniul IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1a56c4;--blue-light:#e8f0fd;--yellow:#f5c200;--yellow-dark:#c49500;--red:#e02020;--green:#1b8a50;--green-light:#e6f5ed;--purple:#6b3fc0;--purple-light:#ede8fa;--orange:#e06b00;--orange-light:#fef2e2;--bg:#f4f7ff;--white:#ffffff;--text:#1a1f3a;--muted:#5a6287;--border:#d4daf0;--radius:14px;--radius-sm:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+nav{background:var(--blue);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(26,86,196,.18)}
+.nav-logo{font-size:1.35rem;font-weight:900;color:#fff;letter-spacing:-.5px}
+.nav-logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--yellow)}
+.hero{background:linear-gradient(135deg,#1a3a8c 0%,#1a56c4 50%,#2066d4 100%);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:var(--yellow);font-size:.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:.35rem 1rem;border-radius:999px;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.6rem}
+.hero h1 span{color:var(--yellow)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 1.2rem}
+.hero-school{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2.5rem;font-style:italic}
+.hero-steam{display:flex;justify-content:center;gap:8px;margin-bottom:2.5rem}
+.steam-pill{padding:.4rem .9rem;border-radius:999px;font-size:.85rem;font-weight:800;letter-spacing:1px}
+.s1{background:#e02020;color:#fff}.s2{background:#f5c200;color:#2a1a00}.s3{background:#1b8a50;color:#fff}.s4{background:#6b3fc0;color:#fff}.s5{background:#e06b00;color:#fff}
+section{max-width:1100px;margin:0 auto;padding:3rem 1.5rem}
+.section-title{font-size:1.6rem;font-weight:900;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.section-title .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);display:inline-block;flex-shrink:0}
+.stats-bar{background:var(--white);border-radius:var(--radius);border:1.5px solid var(--border);display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin-bottom:2.5rem;overflow:hidden}
+.stat-cell{padding:1.4rem;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-size:2rem;font-weight:900;color:var(--blue);font-family:'Space Mono',monospace;line-height:1}
+.stat-label{font-size:.8rem;color:var(--muted);font-weight:600;margin-top:.3rem}
+.sectiuni-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.sectiune-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.4rem;transition:transform .2s,box-shadow .2s;cursor:default}
+.sectiune-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(26,86,196,.12)}
+.sectiune-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
+.sectiune-card h3{font-size:1rem;font-weight:800;margin-bottom:.4rem}
+.sectiune-card p{font-size:.87rem;color:var(--muted);line-height:1.5}
+.tag-ciclu{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.5px;padding:2px 8px;border-radius:999px;margin-bottom:.6rem}
+.primar{background:#fff3cd;color:#7a4e00}.gimnaziu{background:#d4edda;color:#155724}.direct{background:#d1ecf1;color:#0c5460}
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:2rem}
+.tab-btn{background:none;border:none;padding:.85rem 1.4rem;font-family:'Nunito',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab-panel{display:none}.tab-panel.active{display:block}
+.pdf-list{display:flex;flex-direction:column;gap:.75rem}
+.pdf-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;transition:box-shadow .2s}
+.pdf-item:hover{box-shadow:0 4px 16px rgba(26,86,196,.1)}
+.pdf-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.pdf-info{flex:1}.pdf-info h4{font-size:.95rem;font-weight:800}.pdf-info p{font-size:.8rem;color:var(--muted)}
+.pdf-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.gallery-filter{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filter-btn{background:var(--white);border:1.5px solid var(--border);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;color:var(--text)}
+.filter-btn:hover,.filter-btn.active{background:var(--blue);border-color:var(--blue);color:white}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.gallery-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.gallery-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,86,196,.13)}
+.gallery-thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg);cursor:zoom-in}
+.gallery-meta{padding:.75rem}
+.gallery-meta h4{font-size:.88rem;font-weight:800;margin-bottom:2px}
+.gallery-meta p{font-size:.78rem;color:var(--muted)}
+.gallery-category{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:999px;margin-bottom:.35rem}
+.lucrari-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.lucrare-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s}
+.lucrare-card:hover{box-shadow:0 4px 16px rgba(26,86,196,.1)}
+.lucrare-icon{font-size:2rem}
+.lucrare-card h4{font-size:.93rem;font-weight:800}
+.lucrare-card p{font-size:.8rem;color:var(--muted);flex:1}
+.btn{padding:.45rem 1rem;border-radius:var(--radius-sm);font-size:.85rem;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;border:none;transition:opacity .2s;text-decoration:none;display:inline-block}
+.btn:hover{opacity:.85}
+.btn-primary{background:var(--blue);color:white}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-sm{padding:.3rem .75rem;font-size:.8rem}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--muted)}
+.empty-state .ei{font-size:3rem;margin-bottom:1rem}
+.pdf-viewer-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;align-items:center;justify-content:center;padding:2rem}
+.pdf-viewer-overlay.open{display:flex}
+.pdf-viewer-box{background:white;border-radius:var(--radius);width:100%;max-width:900px;height:85vh;display:flex;flex-direction:column;overflow:hidden}
+.pdf-viewer-header{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.pdf-viewer-header h3{font-size:1rem;font-weight:800}
+.pdf-viewer-close{background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--muted);line-height:1}
+.pdf-viewer-iframe{flex:1;border:none;width:100%}
+.lightbox-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center}
+.lightbox-overlay.open{display:flex}
+.lightbox-img{max-width:92vw;max-height:88vh;border-radius:var(--radius);object-fit:contain}
+.lightbox-close{position:fixed;top:1.5rem;right:2rem;background:none;border:none;color:white;font-size:2rem;cursor:pointer;line-height:1}
+footer{background:var(--text);color:rgba(255,255,255,.7);text-align:center;padding:2rem;font-size:.9rem}
+footer a{color:var(--yellow);text-decoration:none}
+footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
+.actualizat-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.25rem .85rem;font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.75rem}
+.loading{text-align:center;padding:3rem;color:var(--muted);font-size:.95rem}
+@media(max-width:768px){
+  nav{padding:0 1rem}
+  .nav-links{display:none}
+  .hero{padding:2.5rem 1rem 2rem}
+  .hero h1{font-size:2.4rem}
+  section{padding:1.5rem 1rem}
+  .section-title{font-size:1.2rem}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-cell{border-right:none;border-bottom:1px solid var(--border);padding:1rem}
+  .stat-cell:nth-child(odd){border-right:1px solid var(--border)}
+  .stat-cell:last-child{border-bottom:none}
+  .sectiuni-grid{grid-template-columns:1fr}
+  .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .tab-btn{white-space:nowrap;font-size:.82rem;padding:.75rem .9rem;flex-shrink:0}
+  .pdf-item{flex-wrap:wrap}
+  .pdf-actions{flex-direction:row;flex-wrap:wrap;width:100%}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .lucrari-grid{grid-template-columns:1fr}
+  .pdf-viewer-box{height:92vh;margin:.5rem}
+  .contact-grid{grid-template-columns:1fr !important}
+  .afis-inner{flex-direction:column}
+  .afis-img{max-width:100% !important}
+}
+@media(max-width:400px){
+  .gallery-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+}
+
+/* Rezultate pe secțiuni */
+.sect-block{margin-bottom:2.5rem}
+.sect-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;padding-bottom:.65rem;border-bottom:2px solid var(--border)}
+.sect-header-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.sect-header h3{font-size:1.1rem;font-weight:900;color:var(--text);flex:1}
+.sect-header .sect-count{font-size:.78rem;font-weight:700;color:var(--muted);background:var(--bg);border:1px solid var(--border);padding:.2rem .6rem;border-radius:999px}
+.rez-table{width:100%;border-collapse:collapse;font-size:.87rem}
+.rez-table th{background:var(--blue);color:white;font-weight:800;padding:.6rem .9rem;text-align:left;font-size:.78rem;letter-spacing:.3px}
+.rez-table th:first-child{border-radius:8px 0 0 0}
+.rez-table th:last-child{border-radius:0 8px 0 0}
+.rez-table td{padding:.6rem .9rem;border-bottom:1px solid var(--border);vertical-align:middle}
+.rez-table tr:last-child td{border-bottom:none}
+.rez-table tr:nth-child(even){background:var(--bg)}
+.rez-table tr:hover{background:var(--blue-light)}
+.rez-table .absent-row td{color:#aaa;font-style:italic}
+.premiu-badge{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;border-radius:999px;font-size:.78rem;font-weight:800;white-space:nowrap}
+.p-i{background:#fff3cd;color:#7a4e00}
+.p-ii{background:#d4edda;color:#155724}
+.p-iii{background:#d1ecf1;color:#0c5460}
+.p-men{background:#ede8fa;color:#3c1f8a}
+.p-part{background:#f1f3f5;color:#555}
+.p-abs{background:#fde8e8;color:#a00}
+.loc-badge{display:inline-block;width:28px;height:28px;border-radius:50%;background:var(--blue);color:white;font-size:.78rem;font-weight:900;text-align:center;line-height:28px}
+.loc-gold{background:#f5c200;color:#2a1a00}
+.loc-silver{background:#b0bec5;color:#1a1a1a}
+.loc-bronze{background:#cd7f32;color:#fff}
+.table-wrap{overflow-x:auto;border-radius:8px;border:1.5px solid var(--border)}
+@media(max-width:600px){
+  .rez-table th,.rez-table td{padding:.5rem .55rem;font-size:.78rem}
+  .sect-header h3{font-size:.95rem}
+}
+@media print{
+  nav,#sectNavBtns,.gallery-filter,.tabs,.pdf-actions,.pdf-list,.tab-btn,.btn,footer .actualizat-badge,
+  #tGalerie,#tPowerPoint,#tVideos,#tLucrari,
+  .pdf-viewer-overlay,.lightbox-overlay{display:none!important}
+  body{background:white;color:#000}
+  .tab-panel{display:block!important}
+  .sect-block{page-break-inside:avoid;margin-bottom:1.5rem}
+  .rez-table th{background:#1a56c4!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rez-table tr:nth-child(even){background:#f4f7ff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .premiu-badge{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:1rem}
+  #rezultateSectiuni>div:first-child{display:none}
+  #rezultateSectiuni>div:nth-child(2){display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Info<span>Junior</span></div>
+  <div class="nav-links">
+    <a href="#afis">Afișul</a>
+    <a href="#sectiuni">Secțiuni</a>
+    <a href="#rezultate">Rezultate</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Concurs Interjudețean STEAM</div>
+  <h1>Info<span>Junior</span></h1>
+  <p class="hero-sub">Concurs interjudețean de creativitate în domeniul IT</p>
+  <p class="hero-school">Liceul Teoretic "Panait Cerna" Brăila</p>
+  <div class="hero-steam">
+    <span class="steam-pill s1">S</span>
+    <span class="steam-pill s2">T</span>
+    <span class="steam-pill s3">E</span>
+    <span class="steam-pill s4">A</span>
+    <span class="steam-pill s5">M</span>
+  </div>
+  <div class="actualizat-badge" id="actualizatBadge">🕐 Se încarcă...</div>
+</div>
+
+<!-- AFIS -->
+<section id="afis">
+  <div class="section-title"><span class="dot" style="background:var(--yellow-dark)"></span> Afișul concursului</div>
+  <div class="afis-inner" style="display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;">
+    <div class="afis-img" style="flex:0 0 auto;max-width:320px;width:100%;">
+      <img id="posterImg" src="InfoJunior.png" alt="Afișul concursului InfoJunior"
+           style="width:100%;border-radius:var(--radius);border:1.5px solid var(--border);box-shadow:0 8px 32px rgba(26,86,196,.13);cursor:zoom-in;display:block;"
+           onclick="openLightbox(this.src)">
+      <div style="margin-top:.75rem;display:flex;gap:.5rem;justify-content:center;">
+        <button class="btn btn-primary btn-sm" onclick="openLightbox(document.getElementById('posterImg').src)">🔍 Mărește</button>
+        <a id="posterDownload" href="" download="afis-infojunior.png" class="btn btn-outline btn-sm">⬇️ Descarcă</a>
+      </div>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <h3 style="font-size:1.1rem;font-weight:800;margin-bottom:1rem;color:var(--blue);">Despre concurs</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;margin-bottom:1rem;">
+        <strong style="color:var(--text);">InfoJunior</strong> este un concurs interjudețean de creativitate în domeniul IT cu tema STEAM, organizat de Liceul Teoretic „Panait Cerna" Brăila, înscris în lista proiectelor de educație extrașcolară interjudețene.
+      </p>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;margin-bottom:1rem;">
+        Concursul vizează elevi din <strong style="color:var(--text);">învățământul primar și gimnazial</strong> și își propune ridicarea nivelului de pregătire în informatică și TIC, dezvoltarea creativității și a spiritului competitiv.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:.5rem;">
+        <div style="background:var(--blue-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">🏆 <strong>Premii:</strong> Premiul I, II, III + Mențiuni — pentru fiecare secțiune</div>
+        <div style="background:var(--green-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">🎓 <strong>Diplome</strong> pentru toți participanții</div>
+        <div style="background:var(--orange-light);border-radius:var(--radius-sm);padding:.75rem 1rem;font-size:.88rem;">📧 <strong>Contact:</strong> <a href="mailto:infojuniorbraila@gmail.com" style="color:var(--blue);">infojuniorbraila@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTIUNI -->
+<section id="sectiuni">
+  <div class="stats-bar">
+    <div class="stat-cell"><div class="stat-num" id="sLucrari">—</div><div class="stat-label">Lucrări</div></div>
+    <div class="stat-cell"><div class="stat-num" id="sImagini">—</div><div class="stat-label">Imagini</div></div>
+    <div class="stat-cell"><div class="stat-num" id="sRezultate">—</div><div class="stat-label">Rezultate PDF</div></div>
+    <div class="stat-cell"><div class="stat-num">8</div><div class="stat-label">Secțiuni</div></div>
+  </div>
+  <div class="section-title"><span class="dot"></span> Secțiunile concursului</div>
+  <div class="sectiuni-grid" id="sectiuniGrid">
+    <div class="loading">Se încarcă secțiunile...</div>
+  </div>
+</section>
+
+<!-- REZULTATE + GALERIE + LUCRARI -->
+<section id="rezultate">
+  <div class="section-title"><span class="dot" style="background:var(--red)"></span> Rezultate, Galerie & Lucrări</div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('tRezultate',this)">📄 Rezultate PDF</button>
+    <button class="tab-btn" onclick="switchTab('tGalerie',this)">🖼️ Galerie</button>
+    <button class="tab-btn" onclick="switchTab('tPowerPoint',this)">📊 Prezentări</button>
+    <button class="tab-btn" onclick="switchTab('tVideos',this)">🤖 Robotică Video</button>
+    <button class="tab-btn" onclick="switchTab('tLucrari',this)">📁 Toate Lucrările</button>
+  </div>
+
+  <!-- REZULTATE -->
+  <div class="tab-panel active" id="tRezultate">
+    <!-- Rezultate pe secțiuni -->
+    <div id="rezultateSectiuni">
+      <!-- Nav sectiuni -->
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem;" id="sectNavBtns">
+        <button class="filter-btn active" onclick="showSect('all',this)">🏆 Toate</button>
+        <button class="filter-btn" onclick="showSect('basme',this)">📖 Lumea Basmelor</button>
+        <button class="filter-btn" onclick="showSect('grafica',this)">🎨 Grafică</button>
+        <button class="filter-btn" onclick="showSect('scratch',this)">🐱 Scratch & Alice</button>
+        <button class="filter-btn" onclick="showSect('programare',this)">💻 Programare C++</button>
+        <button class="filter-btn" onclick="showSect('roboti',this)">🤖 Robotică</button>
+        <button class="filter-btn" onclick="showSect('web',this)">🌐 Pagini Web</button>
+        <button class="filter-btn" onclick="showSect('soft',this)">🎮 Soft Educațional</button>
+        <button class="filter-btn" onclick="showSect('powerpoint',this)">📊 Prezentări PowerPoint</button>
+      </div>
+
+      <!-- Buton PDF -->
+      <div style="margin-bottom:1.5rem;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="printRezultate()" style="display:flex;align-items:center;gap:.5rem;font-size:.9rem;">
+          📄 Descarcă / Printează rezultatele
+        </button>
+        <span style="font-size:.8rem;color:var(--muted);">Se deschide dialogul de printare — alege «Salvare ca PDF»</span>
+      </div>
+
+      <div id="allSects"></div>
+    </div>
+
+    <!-- PDF list vechi (ascuns, pentru compatibilitate) -->
+    <div class="pdf-list" id="pdfList" style="display:none;"></div>
+  </div>
+
+  <!-- GALERIE -->
+  <div class="tab-panel" id="tGalerie" id="galerie">
+    <div class="gallery-filter" id="galleryFilter">
+      <button class="filter-btn active" onclick="filterGallery('all',this)">Toate</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="loading" style="grid-column:1/-1">Se încarcă galeria...</div>
+    </div>
+  </div>
+
+  <!-- POWERPOINT PDF -->
+  <div class="tab-panel" id="tPowerPoint">
+    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:3rem 2rem;text-align:center;">
+      <div style="font-size:3.5rem;margin-bottom:1rem;">📊</div>
+      <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:.6rem;color:var(--text);">Prezentări PowerPoint</h3>
+      <p style="color:var(--muted);font-size:.95rem;max-width:420px;margin:0 auto 2rem;line-height:1.7;">
+        Toate prezentările elevilor sunt disponibile pe Google Drive. Dă click pe butonul de mai jos pentru a le vizualiza sau descărca.
+      </p>
+      <a href="https://drive.google.com/drive/folders/1FbE15XD0vIjhTbUz6ljNPTLgKW_sl1MK?usp=sharing"
+         target="_blank"
+         style="display:inline-flex;align-items:center;gap:.6rem;background:var(--blue);color:white;font-weight:800;font-size:1rem;padding:.85rem 2rem;border-radius:var(--radius);text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 87.3 78" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3L27.5 53H0c0 1.55.4 3.1 1.2 4.5z"/><path d="M43.65 25L29.9 1.2C28.55.4 27 0 25.45 0c-1.55 0-3.1.4-4.45 1.2L6.6 25h37.05z"/><path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75L86.1 57.5c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 11.75z"/><path d="M43.65 25L57.4 1.2C56.05.4 54.5 0 52.95 0H34.35c-1.55 0-3.1.4-4.45 1.2z"/><path d="M59.8 53H27.5L13.75 76.8c1.35.8 2.9 1.2 4.45 1.2h50.8c1.55 0 3.1-.4 4.45-1.2z"/><path d="M73.4 26.5l-6.9-11.95c-1.35-.8-2.9-1.2-4.45-1.2H57.4L43.65 37.7 59.8 53h26.5c0-1.55-.4-3.1-1.2-4.5z"/></svg>
+        Deschide în Google Drive
+      </a>
+      <p style="margin-top:1.5rem;font-size:.8rem;color:var(--muted);">Se deschide într-o fereastră nouă · Nu necesită cont Google</p>
+    </div>
+  </div>
+
+  <!-- VIDEOS ROBOTICA -->
+  <div class="tab-panel" id="tVideos">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;" id="videoGrid"></div>
+  </div>
+
+  <!-- LUCRARI -->
+  <div class="tab-panel" id="tLucrari">
+    <div class="lucrari-grid" id="lucrariGrid">
+      <div class="loading" style="grid-column:1/-1">Se încarcă lucrările...</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0;">
+  <div class="section-title"><span class="dot" style="background:var(--green)"></span> Contact & Informații</div>
+  <div style="background:var(--white);border-radius:var(--radius);border:1.5px solid var(--border);padding:2rem;display:grid" class="contact-grid;grid-template-columns:1fr 1fr;gap:2rem;">
+    <div>
+      <h3 style="font-weight:800;margin-bottom:.75rem;">Organizator</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;">
+        📍 Liceul Teoretic "Panait Cerna" Brăila<br>
+        📧 <a href="mailto:infojuniorbraila@gmail.com" style="color:var(--blue);font-weight:700;">infojuniorbraila@gmail.com</a><br>
+        🏆 Premii: Premiul I, II, III + Mențiuni per secțiune<br>
+        📜 Diplome pentru toți participanții
+      </p>
+    </div>
+    <div>
+      <h3 style="font-weight:800;margin-bottom:.75rem;">Concursul în cifre</h3>
+      <p style="color:var(--muted);font-size:.93rem;line-height:1.8;">
+        🎯 Poziția 321 în lista proiectelor OMEC<br>
+        📚 Cicluri: primar și gimnazial<br>
+        🗺️ Nivel: interjudețean<br>
+        🔗 <a href="https://forms.gle/gXKGEywmBPNQwfnf9" target="_blank" style="color:var(--blue);font-weight:700;">Formular de înscriere</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="ft">InfoJunior – Concurs Interjudețean de Creativitate în Domeniul IT</p>
+  <p>Liceul Teoretic "Panait Cerna" Brăila · <a href="mailto:infojuniorbraila@gmail.com">infojuniorbraila@gmail.com</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;opacity:.6;" id="footerActualizat"></p>
+</footer>
+
+<!-- PDF VIEWER -->
+<div class="pdf-viewer-overlay" id="pdfViewer">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <h3 id="pdfViewerTitle">Rezultate</h3>
+      <button class="pdf-viewer-close" onclick="closePdfViewer()">✕</button>
+    </div>
+    <iframe class="pdf-viewer-iframe" id="pdfViewerFrame" src=""></iframe>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────────────────────
+var SECTIUNI_INFO = {
+  basme:       {label:'Lumea Basmelor',       ciclu:'primar',   icon:'🎨', color:'#fff3cd', desc:'Desen în Paint inspirat din basme — Scufița Roșie, Alba ca Zăpada, Dumbrava Minunată, Sarea în Bucate, Amintiri din Copilărie. Cls. preg.–IV.'},
+  grafica:     {label:'Grafică pe Calculator', ciclu:'gimnaziu', icon:'🖼️', color:'#d4edda', desc:'Desene și pliante A4 sau afișe A3 pe temele: Sigla InfoJunior, Protejăm Natura, Bibliotecă Virtuală, Inteligența Artificială.'},
+  powerpoint:  {label:'Prezentări PowerPoint', ciclu:'gimnaziu', icon:'📊', color:'#d1ecf1', desc:'10–20 diapozitive pe teme ca Vizită în Orașul Natal, SOS Natura, Pasiuni & Hobby-uri, Educația STEAM.'},
+  soft:        {label:'Soft Educațional & Jocuri', ciclu:'gimnaziu', icon:'🎮', color:'#ede8fa', desc:'Aplicații și jocuri educative — evaluate după originalitate, creativitate și complexitate.'},
+  web:         {label:'Pagini Web',            ciclu:'gimnaziu', icon:'🌐', color:'#e8f0fd', desc:'Site-uri web realizate individual sau în echipă, evaluate după originalitate, creativitate și complexitate.'},
+  scratch:     {label:'Scratch & Alice',        ciclu:'gimnaziu', icon:'🐱', color:'#fef2e2', desc:'Proiecte de programare vizuală — platformele Scratch și Alice.'},
+  programare:  {label:'Programare C++',         ciclu:'direct',   icon:'💻', color:'#e6f5ed', desc:'Participare directă. Rezolvarea a două probleme în C++ în 3 ore.'},
+  robotica:    {label:'Robotică',               ciclu:'direct',   icon:'🤖', color:'#fde8e8', desc:'Construirea unui robot autonom care execută o sarcină specifică.'},
+};
+var CAT_COLORS = {
+  primar:  {bg:'#fff3cd',color:'#7a4e00'},
+  gimnaziu:{bg:'#d4edda',color:'#155724'},
+  direct:  {bg:'#d1ecf1',color:'#0c5460'},
+};
+var EXT_ICONS = {pdf:'📄',pptx:'📊',ppt:'📊',sb3:'🐱',html:'🌐',htm:'🌐',zip:'📦',mp4:'🎬',avi:'🎬'};
+
+var allLucrari = [];
+var currentFilter = 'all';
+
+// ── Videos Robotică ───────────────────────────────────────────────────────────
+var VIDEOS = [
+  {id:'ww665cSDCK4', tip:'shorts', titlu:'Robot Autonom 1'},
+  {id:'28qmWFMiHys', tip:'shorts', titlu:'Robot Autonom 2'},
+  {id:'LwWmjlD-XzE', tip:'shorts', titlu:'Robot Autonom 3'},
+  {id:'iM3kYyJkVOY', tip:'shorts', titlu:'Robot Autonom 4'},
+  {id:'bzB4ZMcYjuk', tip:'video',  titlu:'Robot Autonom 5'},
+];
+
+function renderVideos(){
+  var el = document.getElementById('videoGrid');
+  el.innerHTML = VIDEOS.map(function(v){
+    var ytUrl = v.tip === 'shorts'
+      ? 'https://youtube.com/shorts/' + v.id
+      : 'https://youtu.be/' + v.id;
+    var thumb = 'https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg';
+    return '<div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform=\'translateY(-3px)\';this.style.boxShadow=\'0 8px 24px rgba(26,86,196,.13)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">'
+      + '<a href="'+ytUrl+'" target="_blank" style="display:block;position:relative;text-decoration:none;">'
+      + '<img src="'+thumb+'" alt="'+esc(v.titlu)+'" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" loading="lazy">'
+      + '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.25);">'
+      + '<div style="width:56px;height:56px;background:#ff0000;border-radius:50%;display:flex;align-items:center;justify-content:center;">'
+      + '<svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>'
+      + '</div></div></a>'
+      + '<div style="padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;">'
+      + '<span style="font-size:.9rem;font-weight:800;">🤖 '+esc(v.titlu)+'</span>'
+      + '<a href="'+ytUrl+'" target="_blank" style="font-size:.78rem;color:var(--blue);font-weight:700;text-decoration:none;">Vezi pe YouTube ↗</a>'
+      + '</div></div>';
+  }).join('');
+}
+renderVideos();
+
+// ── Poster ────────────────────────────────────────────────────────────────────
+document.getElementById('posterImg').src = 'InfoJunior.png';
+document.getElementById('posterDownload').href = 'InfoJunior.png';
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Fetch data.json ───────────────────────────────────────────────────────────
+fetch('data.json?v=' + Date.now())
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    renderStats(data.stats);
+    renderBadge(data.actualizat);
+    renderSectiuni();
+    renderRezultate(data.rezultate || []);
+    allLucrari = data.lucrari || [];
+    buildGalleryFilters(allLucrari);
+    renderGallery('all');
+    renderLucrari(allLucrari);
+  })
+  .catch(function(){ renderError(); });
+
+function renderError(){
+  document.getElementById('sLucrari').textContent='—';
+  document.getElementById('pdfList').innerHTML = '<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;">Revino pe site după finalizarea concursului.</p></div>';
+  document.getElementById('galleryGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">🎨</div><p style="font-weight:800;">Galeria se pregătește!</p><p style="font-size:.88rem;margin-top:.4rem;">Lucrările vor apărea în curând.</p></div>';
+  document.getElementById('lucrariGrid').innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="ei">📁</div><p style="font-weight:800;">Lucrările vor apărea în curând!</p></div>';
+  renderSectiuni();
+}
+
+// ── Stats ─────────────────────────────────────────────────────────────────────
+function renderStats(s){
+  document.getElementById('sLucrari').textContent = s.total_lucrari;
+  document.getElementById('sImagini').textContent = s.total_imagini;
+  document.getElementById('sRezultate').textContent = s.total_rezultate;
+}
+function renderBadge(ts){
+  document.getElementById('actualizatBadge').textContent = '🕐 Actualizat: ' + ts;
+  document.getElementById('footerActualizat').textContent = 'Ultima actualizare: ' + ts;
+}
+
+// ── Sectiuni ─────────────────────────────────────────────────────────────────
+function renderSectiuni(){
+  var grid = document.getElementById('sectiuniGrid');
+  grid.innerHTML = Object.keys(SECTIUNI_INFO).map(function(key){
+    var s = SECTIUNI_INFO[key];
+    var cc = CAT_COLORS[s.ciclu] || CAT_COLORS.direct;
+    var label = s.ciclu === 'primar' ? 'Primar' : s.ciclu === 'gimnaziu' ? 'Gimnaziu' : 'Direct';
+    return '<div class="sectiune-card">'
+      + '<span class="tag-ciclu" style="background:'+cc.bg+';color:'+cc.color+'">'+label+'</span>'
+      + '<div class="sectiune-icon" style="background:'+s.color+'">'+s.icon+'</div>'
+      + '<h3>'+s.label+'</h3>'
+      + '<p>'+s.desc+'</p>'
+      + '</div>';
+  }).join('');
+}
+
+// ── Rezultate PDF ─────────────────────────────────────────────────────────────
+function renderRezultate(rezultate){
+  var el = document.getElementById('pdfList');
+  if(!rezultate.length){
+    el.innerHTML='<div class="empty-state"><div class="ei">🏆</div><p style="font-weight:800;font-size:1rem;">Rezultatele vor fi publicate în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Revino pe site după finalizarea concursului.</p></div>';
+    return;
+  }
+  el.innerHTML = rezultate.map(function(r,i){
+    return '<div class="pdf-item">'
+      +'<div class="pdf-icon" style="background:#fde8e8">📄</div>'
+      +'<div class="pdf-info"><h4>'+esc(r.titlu)+'</h4><p>'+esc(r.fisier)+'</p></div>'
+      +'<div class="pdf-actions">'
+      +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(r.cale)+'\',\''+esc(r.titlu)+'\')">Vizualizare</button>'
+      +'<a href="'+esc(r.cale)+'" download="'+esc(r.fisier)+'" class="btn btn-outline btn-sm">Descarcă</a>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Prezentări PowerPoint PDF ─────────────────────────────────────────────────
+function renderPowerPoint(lucrari){
+  var el = document.getElementById('pptList');
+  var pdfuri = lucrari.filter(function(l){ return l.sectiune === 'powerpoint' && l.extensie === 'pdf'; });
+  if(!pdfuri.length){
+    el.innerHTML='<div class="empty-state"><div class="ei">📊</div><p style="font-weight:800;">Prezentările vor apărea în curând!</p><p style="font-size:.88rem;margin-top:.4rem;color:var(--muted);">Încarcă fișierele PDF în folderul <code>lucrari/powerpoint/</code>.</p></div>';
+    return;
+  }
+  el.innerHTML = pdfuri.map(function(p, i){
+    return '<div class="pdf-item" style="flex-wrap:wrap;gap:.75rem;">'
+      +'<div class="pdf-icon" style="background:#d1ecf1;">📊</div>'
+      +'<div class="pdf-info" style="flex:1;min-width:180px;"><h4>'+esc(p.titlu)+'</h4><p>'+esc(p.fisier)+'</p></div>'
+      +'<div class="pdf-actions">'
+      +'<button class="btn btn-primary btn-sm" onclick="openPdf(\''+esc(p.cale)+'\',\''+esc(p.titlu)+'\')">👁️ Vizualizare</button>'
+      +'<a href="'+esc(p.cale)+'" download="'+esc(p.fisier)+'" class="btn btn-outline btn-sm">⬇️ Descarcă</a>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Gallery ───────────────────────────────────────────────────────────────────
+var CAT_LABEL_COLORS = {
+  basme:      {bg:'#fff3cd',color:'#7a4e00'},
+  grafica:    {bg:'#d4edda',color:'#155724'},
+  powerpoint: {bg:'#d1ecf1',color:'#0c5460'},
+  soft:       {bg:'#ede8fa',color:'#3c1f8a'},
+  web:        {bg:'#e8f0fd',color:'#1a3a8c'},
+  scratch:    {bg:'#fef2e2',color:'#7a3a00'},
+  programare: {bg:'#e6f5ed',color:'#155724'},
+  robotica:   {bg:'#fde8e8',color:'#7a0000'},
+};
+
+function buildGalleryFilters(lucrari){
+  var imagini = lucrari.filter(function(l){return l.este_imagine});
+  var cats = {};
+  imagini.forEach(function(l){ cats[l.sectiune] = true; });
+  var f = document.getElementById('galleryFilter');
+  Object.keys(cats).forEach(function(cat){
+    var s = SECTIUNI_INFO[cat] || {};
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.textContent = (s.icon||'') + ' ' + (s.label||cat);
+    btn.onclick = function(){ filterGallery(cat, btn); };
+    f.appendChild(btn);
+  });
+}
+
+function filterGallery(cat, btn){
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  renderGallery(cat);
+}
+
+function renderGallery(cat){
+  var imagini = allLucrari.filter(function(l){return l.este_imagine && (cat==='all'||l.sectiune===cat)});
+  var el = document.getElementById('galleryGrid');
+  if(!imagini.length){
+    el.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="ei">🎨</div><p style="font-weight:600">Nicio imagine în această categorie.</p><p style="font-size:.85rem;margin-top:.3rem">Adaugă imagini în folderul secțiunii și dă push.</p></div>';
+    return;
+  }
+  el.innerHTML = imagini.map(function(img){
+    var cc = CAT_LABEL_COLORS[img.sectiune] || {bg:'#e8f0fd',color:'#1a3a8c'};
+    var s = SECTIUNI_INFO[img.sectiune] || {};
+    return '<div class="gallery-item">'
+      +'<img class="gallery-thumb" src="'+esc(img.cale)+'" alt="'+esc(img.titlu)+'" loading="lazy" onclick="openLightbox(\''+esc(img.cale)+'\')">'
+      +'<div class="gallery-meta">'
+      +'<span class="gallery-category" style="background:'+cc.bg+';color:'+cc.color+'">'+(s.label||img.sectiune)+'</span>'
+      +'<h4>'+esc(img.titlu)+'</h4>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Lucrari ───────────────────────────────────────────────────────────────────
+function renderLucrari(lucrari){
+  var el = document.getElementById('lucrariGrid');
+  if(!lucrari.length){
+    el.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="ei">📁</div><p style="font-weight:600">Nicio lucrare încărcată.</p><p style="font-size:.85rem;margin-top:.3rem">Adaugă fișiere în folderele din <code>lucrari/</code> și dă push.</p></div>';
+    return;
+  }
+  el.innerHTML = lucrari.map(function(l){
+    var icon = EXT_ICONS[l.extensie] || '📁';
+    var s = SECTIUNI_INFO[l.sectiune] || {};
+    var cc = CAT_LABEL_COLORS[l.sectiune] || {bg:'#e8f0fd',color:'#1a3a8c'};
+    return '<div class="lucrare-card">'
+      +'<div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.25rem">'
+      +'<span class="lucrare-icon">'+icon+'</span>'
+      +'<span class="gallery-category" style="background:'+cc.bg+';color:'+cc.color+'">'+(s.label||l.sectiune)+'</span>'
+      +'</div>'
+      +'<h4>'+esc(l.titlu)+'</h4>'
+      +'<p style="font-size:.78rem;color:var(--muted)">'+esc(l.fisier)+'</p>'
+      +'<a href="'+esc(l.cale)+'" download="'+esc(l.fisier)+'" class="btn btn-outline btn-sm" style="align-self:flex-start">⬇️ Descarcă</a>'
+      +'</div>';
+  }).join('');
+}
+
+// ── PDF Viewer ────────────────────────────────────────────────────────────────
+function openPdf(cale, titlu){
+  document.getElementById('pdfViewerTitle').textContent = titlu;
+  document.getElementById('pdfViewerFrame').src = cale;
+  document.getElementById('pdfViewer').classList.add('open');
+}
+function closePdfViewer(){
+  document.getElementById('pdfViewer').classList.remove('open');
+  document.getElementById('pdfViewerFrame').src='';
+}
+
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// ── Utils ─────────────────────────────────────────────────────────────────────
+function esc(s){ var d=document.createElement('div');d.textContent=String(s);return d.innerHTML; }
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePdfViewer();closeLightbox();}});
+
+// ── Rezultate pe Secțiuni ────────────────────────────────────────────────────
+var REZULTATE_DATA = {
+  basme: {
+    label: 'Lumea Basmelor', icon: '📖', color: '#fff3cd',
+    grupe: [
+      { titlu: 'Clasa Pregătitoare', elevi: [
+        {loc:'—', nume:'Bogdan Andreea', clasa:'Pregătitoare', scoala:'Șc. Gim. Țifești', judet:'Vrancea', prof:'Nedelcu Ramona-Manuela', premiu:'Absent'},
+        {loc:'—', nume:'Hilohi Manole', clasa:'Pregătitoare', scoala:'Șc. Gim. Țifești', judet:'Vrancea', prof:'Nedelcu Ramona-Manuela', premiu:'Absent'},
+        {loc:'—', nume:'Tănase Daria', clasa:'Pregătitoare', scoala:'Șc. Gim. Țifești', judet:'Vrancea', prof:'Nedelcu Ramona-Manuela', premiu:'Absent'},
+      ]},
+      { titlu: 'Clasa a III-a', elevi: [
+        {loc:'🥇', nume:'Țuțuianu Andra', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul I'},
+        {loc:'🥈', nume:'Pavel Daria Ștefania', clasa:'a III-a', scoala:'Palatul Copiilor Tulcea', judet:'Tulcea', prof:'Macovschi Anca', premiu:'Premiul II'},
+        {loc:'🥉', nume:'Nadia Cristea', clasa:'a III-a', scoala:'Palatul Copiilor Tulcea', judet:'Tulcea', prof:'Macovschi Anca', premiu:'Premiul III'},
+        {loc:'4', nume:'Stupu Raisa', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Mențiune'},
+        {loc:'5', nume:'Grau Johana', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Mențiune'},
+        {loc:'6', nume:'Gabor Natalia', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Participare'},
+        {loc:'7', nume:'Cristea Răzvan', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Participare'},
+        {loc:'8', nume:'Cacenco Alice Georgiana', clasa:'a III-a', scoala:'Palatul Copiilor Tulcea', judet:'Tulcea', prof:'Macovschi Anca', premiu:'Participare'},
+        {loc:'9', nume:'Borghină Maria', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Participare'},
+        {loc:'10', nume:'Cipariu Ovidiu', clasa:'a III-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Participare'},
+      ]},
+      { titlu: 'Clasa a IV-a', elevi: [
+        {loc:'🥇', nume:'Romînoaea Miruna', clasa:'a IV-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul I'},
+        {loc:'🥈', nume:'Neagu Nicoleta', clasa:'a IV-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul II'},
+        {loc:'🥉', nume:'Mihu Rareș', clasa:'a IV-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul III'},
+        {loc:'4', nume:'Bîgiu Vasile Rareș', clasa:'a IV-a', scoala:'Șc. Gim. Ostrovu Aluniș', judet:'Prahova', prof:'Apostol Leontina', premiu:'Mențiune'},
+        {loc:'5', nume:'Văculișteanu Mario', clasa:'a IV-a', scoala:'Șc. Gim. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Participare'},
+      ]},
+    ]
+  },
+  grafica: {
+    label: 'Grafică Digitală', icon: '🎨', color: '#d4edda',
+    grupe: [
+      { titlu: 'Clasa a V-a', elevi: [
+        {loc:'🥇', nume:'Chihaia Elena', clasa:'a V-a', scoala:'C.N. Calistrat Hogaș Tecuci', judet:'Galați', prof:'Ioniță Doina', premiu:'Locul I'},
+        {loc:'🥈', nume:'Arion Elisa', clasa:'a V-a', scoala:'C.N. Calistrat Hogaș Tecuci', judet:'Galați', prof:'Ioniță Doina', premiu:'Locul II'},
+        {loc:'🥉', nume:'Stănciulescu Eric-Andrei', clasa:'a V-a', scoala:'Liceul Teoretic «Ion Barbu» București', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Locul III'},
+        {loc:'4', nume:'Sterpu Maria Daria', clasa:'a V-a', scoala:'Lic. Teh. «Nicolae Oncescu» Ianca', judet:'Brăila', prof:'Morteciu Dumitru Dănuț', premiu:'Mențiune'},
+        {loc:'5', nume:'Paraschiv Andra Gabriela', clasa:'a V-a', scoala:'Șc. Gim. «A.S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Mențiune'},
+        {loc:'6', nume:'Mehedinți David Alexandru', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Mențiune'},
+        {loc:'7', nume:'David Andrei', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Mențiune'},
+        {loc:'8', nume:'Stancu Alexandra', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'9', nume:'Marin Andreea Miruna', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'10', nume:'Cotea Yanis', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'11', nume:'Vasilache Andreea', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'12', nume:'Aparece Ștefan Daniel', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'13', nume:'Ștefan Ianis', clasa:'a V-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Participare'},
+        {loc:'—', nume:'Tîrdea Nicole', clasa:'a V-a', scoala:'Șc. Gim. Duiliu Zamfirescu Dumbrăveni', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+        {loc:'—', nume:'Datcu Maria', clasa:'a V-a', scoala:'Șc. Gim. Duiliu Zamfirescu Dumbrăveni', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+      ]},
+      { titlu: 'Clasa a VI-a', elevi: [
+        {loc:'🥇', nume:'Popa Lavinia Ionelia', clasa:'a VI-a', scoala:'Șc. Gim. «Alexandru Vlahuță» Gugești', judet:'Vrancea', prof:'Grecu Daniel Valentin', premiu:'Locul I'},
+        {loc:'🥈', nume:'Stănescu Izabela Teodora', clasa:'a VI-a', scoala:'Șc. Gim. «Alexandru Vlahuță» Gugești', judet:'Vrancea', prof:'Grecu Daniel Valentin', premiu:'Locul II'},
+        {loc:'🥉', nume:'Nichita Liviu Constantin', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Locul III'},
+        {loc:'4', nume:'Boeru Antonia Ștefania', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Mențiune'},
+        {loc:'5', nume:'Băjenaru Ioana Denisa', clasa:'a VI-a', scoala:'Șc. Gim. «Alexandru Vlahuță» Gugești', judet:'Vrancea', prof:'Grecu Daniel Valentin', premiu:'Mențiune'},
+        {loc:'6', nume:'Voicu David', clasa:'a VI-a', scoala:'Șc. Gim. Prof. Mihai Simbotin Cârligele', judet:'Vrancea', prof:'Pîrlea Gabriela Mihaela', premiu:'Mențiune'},
+        {loc:'7', nume:'Oneș Vlăduț', clasa:'a VI-a', scoala:'Șc. Gim. Prof. Mihai Simbotin Cârligele', judet:'Vrancea', prof:'Pîrlea Gabriela Mihaela', premiu:'Mențiune'},
+        {loc:'8', nume:'Bălan Kevin Nicolas', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Participare'},
+        {loc:'9', nume:'Fotea Luca Mario', clasa:'a VI-a', scoala:'Șc. Gim. «A.S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Participare'},
+        {loc:'—', nume:'Bîrhală Eduard', clasa:'a VI-a', scoala:'Șc. Gim. Golești', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+        {loc:'—', nume:'Mazilu Iulia', clasa:'a VI-a', scoala:'Șc. Gim. Vulturu', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+      ]},
+      { titlu: 'Clasa a VII-a', elevi: [
+        {loc:'🥇', nume:'Marin Crina Raluca / Dudău Rareș Gabriel', clasa:'a VII-a', scoala:'C.N. «Gh. M. Murgoci» Brăila', judet:'Brăila', prof:'Marin Florina', premiu:'Locul I'},
+        {loc:'🥈', nume:'Cioancas Ianis Gabriel / Iacob Robert Andrei', clasa:'a VII-a', scoala:'Șc. Gim. «Ecaterina Teodoroiu» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Locul II'},
+        {loc:'🥉', nume:'Sechel Luminița / Berlescu Ioana', clasa:'a VII-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Locul III'},
+        {loc:'4', nume:'Miron Răzvan / Boncătă Rareș', clasa:'a VII-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Mențiune'},
+        {loc:'5', nume:'Broască Delia Cristina', clasa:'a VII-a', scoala:'Lic. Teh. «Nicolae Oncescu» Ianca', judet:'Brăila', prof:'Morteciu Dumitru Dănuț', premiu:'Mențiune'},
+        {loc:'6', nume:'Ștefan Clara Maria', clasa:'a VII-a', scoala:'Șc. Gim. «Fănuș Neagu» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Participare'},
+        {loc:'7', nume:'Pârvu Robert Andrei', clasa:'a VII-a', scoala:'C.N. «Ana Aslan» Brăila', judet:'Brăila', prof:'Buțea Elena', premiu:'Participare'},
+        {loc:'8', nume:'Gavrilă Tatiana', clasa:'a VII-a', scoala:'Șc. Gim. «A.S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Participare'},
+        {loc:'9', nume:'Hurmuzache Flavius Ionel', clasa:'a VII-a', scoala:'Șc. Gim. «A.S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Participare'},
+      ]},
+      { titlu: 'Clasa a VIII-a', elevi: [
+        {loc:'🥇', nume:'Spulber Leonard', clasa:'a VIII-a', scoala:'Șc. Gim. «Radu Tudoran» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Locul II'},
+        {loc:'🥈', nume:'Brânză Gabriel', clasa:'a VIII-a', scoala:'Șc. Gim. «Radu Tudoran» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Locul I'},
+      ]},
+    ]
+  },
+  scratch: {
+    label: 'Scratch & Alice', icon: '🐱', color: '#fef2e2',
+    elevi: [
+      {loc:'1', nume:'Neagu Andrei Ionuț', clasa:'a III-a', scoala:'Șc. Gimn. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul I'},
+      {loc:'2', nume:'Neacșu Anais', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Premiul I'},
+      {loc:'3', nume:'BUJOIU MADALIN', clasa:'a VI-a', scoala:'Colegiul Național "N. Iorga" Brăila', judet:'Brăila', prof:'Antohi Daniela', premiu:'Premiul I'},
+      {loc:'4', nume:'Țoca Andrei', clasa:'a VIII-a', scoala:'Școala Gimnazială Vulturu', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Premiul I'},
+      {loc:'5', nume:'Boia Alessya', clasa:'a IV-a', scoala:'Șc. Gimn. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul II'},
+      {loc:'6', nume:'Horeangă Petru-Andrei', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Premiul II'},
+      {loc:'7', nume:'Dumitru Rares Andrei', clasa:'a VI-a', scoala:'Școala Gimnazială «A. S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Premiul II'},
+      {loc:'8', nume:'Danilik Sofia', clasa:'a VII-a', scoala:'Școala Gimnazială «A. S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Premiul II'},
+      {loc:'9', nume:'Mihu Rareș', clasa:'a IV-a', scoala:'Șc. Gimn. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Premiul III'},
+      {loc:'10', nume:'Dulgheriu Eveline-Gabriela', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Premiul III'},
+      {loc:'11', nume:'Popescu Luca Rareș', clasa:'a VI-a', scoala:'Școala Gimnazială "Alexandru Vlahuță" Gugești', judet:'Vrancea', prof:'Grecu Daniel Valentin', premiu:'Premiul III'},
+      {loc:'—', nume:'Albu Eduard-Andrei', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Mențiune'},
+      {loc:'—', nume:'Așici Batuhan-Gokturk', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Mențiune'},
+      {loc:'—', nume:'Buhai Răzvan-Ionuț', clasa:'a V-a', scoala:'Șc. Gim. «Nedelcu Chercea» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Mențiune'},
+      {loc:'—', nume:'Grăjdan Eros-Mario', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Mențiune'},
+      {loc:'—', nume:'Hoancă Denis-Constantin', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Mențiune'},
+      {loc:'—', nume:'Oancea-Radu Andrei', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Mențiune'},
+      {loc:'—', nume:'Stupu Raul', clasa:'a V-a', scoala:'Șc. Gimn. Vurpăr', judet:'Sibiu', prof:'Petrică Maria-Alexandra', premiu:'Mențiune'},
+      {loc:'—', nume:'Bădîrcu Anna-Sophia', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Dumitrescu Irina-Maria', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Făgărășanu Paul-Sebastian', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Ionică Vlad-Andrei', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Marin Iris-Andrada', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Șandru Alexandru-Andrei', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'Tănase Rania-Maria', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Participare'},
+      {loc:'—', nume:'CARCIUMARU ELENA', clasa:'a VI-a', scoala:'Colegiul Național "N. Iorga" Brăila', judet:'Brăila', prof:'Antohi Daniela', premiu:'Participare'},
+      {loc:'—', nume:'Demirtaș Alen-Yusuf', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Absent'},
+      {loc:'—', nume:'Iliescu Daniele', clasa:'a V-a', scoala:'Palatul Copiilor Focșani', judet:'Vrancea', prof:'Dumitru Emilia', premiu:'Absent'},
+      {loc:'—', nume:'Nicola Alexandra-Maria', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Absent'},
+      {loc:'—', nume:'Nicu Iarinna-Andreea', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Absent'},
+      {loc:'—', nume:'Parfene Gabriela', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Absent'},
+      {loc:'—', nume:'Silitră Antonia-Raluca', clasa:'a V-a', scoala:'Liceul Teoretic "Ion Barbu"', judet:'București', prof:'Gheorghe Monalisa-Andreea', premiu:'Absent'},
+      {loc:'—', nume:'Vladoiu George', clasa:'a VI-a', scoala:'Palatul Copiilor Focșani', judet:'Vrancea', prof:'Dumitru Emilia', premiu:'Absent'},
+      {loc:'—', nume:'Daria Balosin', clasa:'a VII-a', scoala:'Școala Gimnazială Vulturu', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+    ]
+  },
+  programare: {
+    label: 'Programare C++', icon: '💻', color: '#e6f5ed',
+    elevi: [
+      {loc:'1', nume:'Zaharia Antim Marian', clasa:'a V-a', scoala:'Centrul Județean de Excelență Brăila', judet:'Brăila', prof:'Ion Aurelia și Slavu Mihaela', premiu:'Premiul I'},
+      {loc:'2', nume:'Zafiu Daniel', clasa:'a VI-a', scoala:'C.N. «Gheorghe Munteanu-Murgoci» Brăila', judet:'Brăila', prof:'Ciaușu Liliana, Slavu Mihaela, Ion Aurelia', premiu:'Premiul I'},
+      {loc:'3', nume:'Popescu Tudor Matei', clasa:'a VII-a', scoala:'Centrul Județean de Excelență Brăila', judet:'Brăila', prof:'Sima Raluca, Trufaș Cătălina', premiu:'Premiul I'},
+      {loc:'4', nume:'Munteanu Mihnea Gabriel', clasa:'a VIII-a', scoala:'Colegiul Național «Unirea» Focșani', judet:'Vrancea', prof:'Vlad Elena Brinzoi', premiu:'Premiul I'},
+      {loc:'5', nume:'Andrei Gabriela', clasa:'a VI-a', scoala:'CJE Brăila / C.N. «Ana Aslan»', judet:'Brăila', prof:'Ion Aurelia, Slavu Mihaela, Buțea Elena', premiu:'Premiul II'},
+      {loc:'6', nume:'Mohorea David-Cristian', clasa:'a VII-a', scoala:'C.N. «Gheorghe Munteanu-Murgoci» Brăila / CEX Brăila', judet:'Brăila', prof:'Marin Florina, Sima Raluca, Trufaș Cătălina', premiu:'Premiul II'},
+      {loc:'7', nume:'Stoinoiu Valentin', clasa:'a VI-a', scoala:'Șc. Gim. Duiliu Zamfirescu Dumbrăveni', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Premiul III'},
+      {loc:'8', nume:'Dublea Alexandru', clasa:'a VII-a', scoala:'Centrul Județean de Excelență Brăila', judet:'Brăila', prof:'Sima Raluca, Trufaș Cătălina', premiu:'Premiul III'},
+      {loc:'—', nume:'Sampetru Sonia-Maria', clasa:'a VI-a', scoala:'Șc. Gim. «Ion Creangă» Brăila', judet:'Brăila', prof:'Aurelia Ion, Mihaela Slavu', premiu:'Mențiune'},
+      {loc:'—', nume:'Gagniuc Timeea-Maria', clasa:'a VI-a', scoala:'Șc. Gim. «Ion Creangă» Brăila', judet:'Brăila', prof:'Ion Aurelia, Slavu Mihaela, Colgiu Luminița', premiu:'Mențiune'},
+      {loc:'—', nume:'Mocanu Lavinia Gabriela', clasa:'a VII-a', scoala:'Liceul Teoretic «Constantin Angelescu» Ianca', judet:'Brăila', prof:'Morteciu Dumitru Dănuț', premiu:'Mențiune'},
+      {loc:'—', nume:'Gheorghe Rareș', clasa:'a V-a', scoala:'Centrul Județean de Excelență Brăila', judet:'Brăila', prof:'Ion Aurelia, Slavu Mihaela', premiu:'Participare'},
+      {loc:'—', nume:'Denis S Ghermeni', clasa:'a VI-a', scoala:'Șc. Gim. «Ion Creangă» Brăila', judet:'Brăila', prof:'Slavu Mihaela, Ion Aurelia, Colgiu Luminița', premiu:'Participare'},
+      {loc:'—', nume:'Maria Butnaru', clasa:'a VII-a', scoala:'Șc. Gim. «Ion Creangă» Brăila', judet:'Brăila', prof:'Colgiu Luminița, Slavu Mihaela, Ion Aurelia', premiu:'Participare'},
+      {loc:'—', nume:'BUJOIU MADALIN', clasa:'a VI-a', scoala:'Colegiul Național «Nicolae Iorga» Brăila', judet:'Brăila', prof:'Antohi Daniela', premiu:'Absent'},
+    ]
+  },
+  roboti: {
+    label: 'Programare Roboți', icon: '🤖', color: '#fde8e8',
+    elevi: [
+      {loc:'1', nume:'Huhu Maria Andreea', clasa:'a VI-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Premiul I'},
+      {loc:'2', nume:'Halici Martina Liliana', clasa:'a VI-a', scoala:'Șc. Gim. «Nicolae Iorga» Focșani', judet:'Vrancea', prof:'Moșescu Romică', premiu:'Premiul II'},
+      {loc:'3', nume:'Constantin Isabela-Maria, Deliu Andra Violeta', clasa:'a VI-a', scoala:'C.N. «Gheorghe Munteanu Murgoci» Brăila', judet:'Brăila', prof:'Ciaușu Liliana', premiu:'Premiul III'},
+      {loc:'—', nume:'Stoian Maria Rebeca, Berechet Mihnea Rares, Gutui Alexandra, Marin Daria Cătălina, Amza Antonia', clasa:'a VII-a', scoala:'C.N. «Gheorghe Munteanu Murgoci» Brăila', judet:'Brăila', prof:'Marin Florina', premiu:'Participare'},
+      {loc:'—', nume:'Grosu Fabian Gabriel', clasa:'a V-a', scoala:'Școala Gimnazială Paulești', judet:'Vrancea', prof:'Anutoiu', premiu:'Absent'},
+    ]
+  },
+  web: {
+    label: 'Pagini Web', icon: '🌐', color: '#e8f0fd',
+    elevi: [
+      {loc:'1', nume:'Calu Iosif Timotei', clasa:'a VII-a', scoala:'Liceul Teoretic Dr. Luca', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Premiul I'},
+      {loc:'2', nume:'Spulber Leonard', clasa:'a VIII-a', scoala:'Școala Gimnazială «Radu Tudoran» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Premiul II'},
+      {loc:'3', nume:'Marin Crina Raluca, Dudau Rares Gabriel', clasa:'a VII-a', scoala:'C.N. «Gh.M. Murgoci» Brăila', judet:'Brăila', prof:'Marin Florina', premiu:'Premiul III'},
+      {loc:'—', nume:'Ivanov Matei', clasa:'a VI-a', scoala:'Șc. Gim. «A. S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Mențiune'},
+      {loc:'—', nume:'Oracă Gabriel', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Participare'},
+      {loc:'—', nume:'Dumitru Deniss', clasa:'a VIII-a', scoala:'Școala Gimnazială Vulturu', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+      {loc:'—', nume:'Mereuță Bogdan', clasa:'a VIII-a', scoala:'Șc. Gim. Duiliu Zamfirescu Dumbrăveni', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
+    ]
+  },
+  soft: {
+    label: 'Soft Educațional & Jocuri', icon: '🎮', color: '#ede8fa',
+    elevi: [
+      {loc:'1', nume:'Pîrlog Karol Gabriel', clasa:'a VII-a', scoala:'Liceul Tehnologic «Nicolae Oncescu» Ianca', judet:'Brăila', prof:'Morteciu Dumitru Dănuț', premiu:'Premiul I'},
+      {loc:'2', nume:'Dima Laurentiu-Mihail', clasa:'a VII-a', scoala:'Palatul Copiilor Tulcea', judet:'Tulcea', prof:'Anca Macovschi', premiu:'Premiul II'},
+    ]
+  },
+  powerpoint: {
+  "label": "Prezentări PowerPoint",
+  "icon": "📊",
+  "color": "#d1ecf1",
+  "columns": [
+    "nume",
+    "clasa",
+    "scoala",
+    "prof",
+    "premiu"
+  ],
+  "grupe": [
+    {
+      "titlu": "Clasa a IV-a",
+      "elevi": [
+        {
+          "nume": "Radu Cristian David",
+          "clasa": "a IV-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Premiul I"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a V-a",
+      "elevi": [
+        {
+          "nume": "Vanghelie Anastasia",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Anuti Serena Ioana",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Burlanescu Daria Maria si Roatesi Eva Maria",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Gurgu Iris Maria",
+          "clasa": "a V-a",
+          "scoala": "Colegiul National Ana Aslan Braila",
+          "prof": "Butea Eugenia Elena",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "CRACIUN PATRICK",
+          "clasa": "a V-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "BURADA IRIS",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Suciu Adelina Ioana",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mogos Maria Alessia",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Alecu Mihai Adrian Florentin + Ciobanu Vladimir Alexandru",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Moraru Ilinca Teodora + Minculescu Ilinca",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Cojocariu Toma Gabriel",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VI-a",
+      "elevi": [
+        {
+          "nume": "Andrei Gabriela Rodica",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Ana Aslan Braila",
+          "prof": "Butea Eugenia Elena",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Stanescu Izabela Teodora",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Popa Lavinia Ionelia",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Sirmachi Daria",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Calistrat Hogas Tecuci",
+          "prof": "Ionita Doina",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Panaghioiu-David-Cristian",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "BUTIA BOGDAN",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Cazacu Ioana",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Ionita Lavinia Nicoleta",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Nenciu Sorin",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "CUPRIAN ANDREI",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Ionita Andreea Denisa",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mihu Cosmin",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "CARCIUMARU ELENA",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Musca Cornel Sebastian",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Ana Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Stefan cel Mare Focsani",
+          "prof": "Ladunca Alina",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "TALPAU DAMIAN SI LEPADATU DRAGOS",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Dragomir Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mocanu Daria Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala A.S. Puskin Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Bajenaru Ioana Denisa",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "—",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "STOICA ROBERT SI PUIU ANDREI",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "DANCIUC STEFANIA",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Bogdan Ionut",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Procop David",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Batog Dragos-Stefan si Plisc Erika",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Romina",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Batog Dragos-Stefan",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Antonia Nistor",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Carbunaru Mihai Antonio + Neacsu Darius Constantin",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Dan Nicholas",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Gheorghe Vlad-Mihai + Zaharia David",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Neagu Mihai Eduardo",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tifesti Vrancea",
+          "prof": "Anutoiu Fanica",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "PETREA ROMINA (Scoala Golesti)",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Golesti Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Rogoz Nectarie",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VII-a",
+      "elevi": [
+        {
+          "nume": "Trofin Lara Maria",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu Ianca",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Onea George Marius",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Prof. Mihai Simbotin Carligele",
+          "prof": "Pirlea Gabriela Mihaela",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "BERCEA CRISTINA SI IANCU ILINCA",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Pirlog Karol Gabriel",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Dutu Luca",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Caescu Tudor Alexandru + Voicu Andrei Gabriel",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Capatiina Dalia Maria",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu",
+          "prof": "Morteciu Dumitru Danut",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Popescu Maria + Selagea Elisa Ilinca",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Ghinea Maria Andreea",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Marin Crina Raluca, Dudau Rares Gabriel, Iorga Loriana Maria",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Gh. M. Murgoci Braila",
+          "prof": "Marin Florina, Iosif Mimi",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Panait Sara-Andreea, Stan Adina-Maria",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Gh. M. Murgoci Braila",
+          "prof": "Marin Florina",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Nita David si Borcan Medeea",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Postolache Anna",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Teaca Maria Antonia",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Melter Miruna Stefania",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Teoretic Nicolae Oncescu Ianca",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Barbieru Ioan David",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Fanus Neagu Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Berceanu Rares + Gavriloaia Marius Alexandru",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Enache Eva Maria",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Gherghina Mihai",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Duiliu Zamfirescu Dumbraveni",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Giurcan Maria",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Duiliu Zamfirescu Dumbraveni",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Lalciu Luca Mihai + Niculescu Eduard",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VIII-a",
+      "elevi": [
+        {
+          "nume": "Oantță Radu",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul Economic Hermes Petrosani",
+          "prof": "Gherlan Georgiana-Monteola",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Spulber Leonard",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Cupliu Robert George",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala A.S. Puskin Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Ștefan Sergiu",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Guzu Darius Alexandru",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Fanus Neagu Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Munteanu Catalin",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul Economic Hermes Petrosani",
+          "prof": "Gherlan Georgiana-Monteola",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Vasiliu Roxana Maria",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "DIMA MIRCEA",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Cristian",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "VLADESCU MEDEEA",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petre Alexia",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Participare"
+        }
+      ]
+    }
+  ]
+}
+};
+
+var currentSect = 'all';
+
+function premiuClass(p){
+  var lower = (p||'').toLowerCase();
+  if(lower.includes('i') && !lower.includes('ii') && !lower.includes('iii') && (lower.includes('premiul') || lower.includes('locul'))) return 'p-i';
+  if(lower.includes('ii') && !lower.includes('iii')) return 'p-ii';
+  if(lower.includes('iii')) return 'p-iii';
+  if(lower.includes('men')) return 'p-men';
+  if(lower.includes('abs')) return 'p-abs';
+  return 'p-part';
+}
+
+function locClass(loc){
+  if(loc==='🥇'||loc==='1') return 'loc-gold';
+  if(loc==='🥈'||loc==='2') return 'loc-silver';
+  if(loc==='🥉'||loc==='3') return 'loc-bronze';
+  return '';
+}
+
+var COL_DEFS = {
+  loc:    'Loc',
+  nume:   'Elev',
+  clasa:  'Clasa',
+  scoala: 'Unitatea școlară',
+  judet:  'Județ',
+  prof:   'Prof. îndrumător',
+  premiu: 'Premiu'
+};
+var DEFAULT_COLS = ['loc','nume','clasa','scoala','judet','prof','premiu'];
+
+function renderCell(e, col){
+  switch(col){
+    case 'loc':
+      var locDisp = (e.loc==='—'||e.loc==='-') ? '<span style="color:#ccc">—</span>' : '<span class="loc-badge '+locClass(e.loc)+'">'+esc(e.loc)+'</span>';
+      return '<td>'+locDisp+'</td>';
+    case 'nume':   return '<td><strong>'+esc(e.nume)+'</strong></td>';
+    case 'clasa':  return '<td>'+esc(e.clasa)+'</td>';
+    case 'scoala': return '<td>'+esc(e.scoala)+'</td>';
+    case 'judet':  return '<td style="white-space:nowrap">'+esc(e.judet)+'</td>';
+    case 'prof':   return '<td style="font-size:.8rem;color:var(--muted)">'+esc(e.prof)+'</td>';
+    case 'premiu': return '<td><span class="premiu-badge '+premiuClass(e.premiu)+'">'+esc(e.premiu)+'</span></td>';
+    default:       return '<td></td>';
+  }
+}
+
+function buildElevRows(elevi, cols){
+  cols = cols || DEFAULT_COLS;
+  return elevi.map(function(e){
+    var isAbs = (e.premiu||'').toLowerCase().includes('abs');
+    var isPart = (e.premiu||'').toLowerCase() === 'participare';
+    var cls = (isAbs || isPart) ? ' class="absent-row"' : '';
+    return '<tr'+cls+'>'+cols.map(function(c){return renderCell(e,c);}).join('')+'</tr>';
+  }).join('');
+}
+
+function buildSectBlock(key, data){
+  var cols = data.columns || DEFAULT_COLS;
+  var colspan = cols.length;
+  var totalElevi = 0;
+  var bodyHtml = '';
+
+  if(data.grupe){
+    // Format cu subgrupuri pe clase
+    data.grupe.forEach(function(grupa){
+      totalElevi += grupa.elevi.length;
+      bodyHtml += '<tr style="background:var(--blue-light)!important;">'
+        +'<td colspan="'+colspan+'" style="font-weight:800;font-size:.82rem;color:var(--blue);padding:.5rem .9rem;letter-spacing:.3px;">'+esc(grupa.titlu)+'</td>'
+        +'</tr>';
+      bodyHtml += buildElevRows(grupa.elevi, cols);
+    });
+  } else {
+    totalElevi = data.elevi.length;
+    bodyHtml = buildElevRows(data.elevi, cols);
+  }
+
+  if(!totalElevi) return '';
+
+  var headHtml = cols.map(function(c){return '<th>'+esc(COL_DEFS[c]||c)+'</th>';}).join('');
+
+  return '<div class="sect-block" data-sect="'+key+'">'
+    +'<div class="sect-header">'
+    +'<div class="sect-header-icon" style="background:'+data.color+'">'+data.icon+'</div>'
+    +'<h3>'+esc(data.label)+'</h3>'
+    +'<span class="sect-count">'+totalElevi+' elevi</span>'
+    +'</div>'
+    +'<div class="table-wrap"><table class="rez-table">'
+    +'<thead><tr>'+headHtml+'</tr></thead>'
+    +'<tbody>'+bodyHtml+'</tbody>'
+    +'</table></div>'
+    +'</div>';
+}
+
+function renderAllSects(){
+  var container = document.getElementById('allSects');
+  var html = '';
+  Object.keys(REZULTATE_DATA).forEach(function(key){
+    if(currentSect === 'all' || currentSect === key){
+      html += buildSectBlock(key, REZULTATE_DATA[key]);
+    }
+  });
+  container.innerHTML = html || '<div class="empty-state"><div class="ei">🏆</div><p>Nicio secțiune selectată.</p></div>';
+}
+
+function showSect(key, btn){
+  currentSect = key;
+  document.querySelectorAll('#sectNavBtns .filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  renderAllSects();
+}
+
+function printRezultate(){
+  // Salvam starea și afisam tot
+  var prev = currentSect;
+  currentSect = 'all';
+  renderAllSects();
+  window.print();
+  currentSect = prev;
+  renderAllSects();
+}
+
+// Init
+renderAllSects();
+</script>
+</body>
+</html>
