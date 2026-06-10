@@ -264,6 +264,7 @@ footer .ft{color:white;font-weight:800;font-size:1rem;margin-bottom:.4rem}
         <button class="filter-btn" onclick="showSect('roboti',this)">🤖 Robotică</button>
         <button class="filter-btn" onclick="showSect('web',this)">🌐 Pagini Web</button>
         <button class="filter-btn" onclick="showSect('soft',this)">🎮 Soft Educațional</button>
+        <button class="filter-btn" onclick="showSect('powerpoint',this)">📊 Prezentări PowerPoint</button>
       </div>
 
       <!-- Buton PDF -->
@@ -681,7 +682,7 @@ var REZULTATE_DATA = {
         {loc:'4', nume:'Boeru Antonia Ștefania', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Mențiune'},
         {loc:'5', nume:'Băjenaru Ioana Denisa', clasa:'a VI-a', scoala:'Șc. Gim. «Alexandru Vlahuță» Gugești', judet:'Vrancea', prof:'Grecu Daniel Valentin', premiu:'Mențiune'},
         {loc:'6', nume:'Voicu David', clasa:'a VI-a', scoala:'Șc. Gim. Prof. Mihai Simbotin Cârligele', judet:'Vrancea', prof:'Pîrlea Gabriela Mihaela', premiu:'Mențiune'},
-        {loc:'7', nume:'Onea Vlăduț', clasa:'a VI-a', scoala:'Șc. Gim. Prof. Mihai Simbotin Cârligele', judet:'Vrancea', prof:'Pîrlea Gabriela Mihaela', premiu:'Mențiune'},
+        {loc:'7', nume:'Oneș Vlăduț', clasa:'a VI-a', scoala:'Șc. Gim. Prof. Mihai Simbotin Cârligele', judet:'Vrancea', prof:'Pîrlea Gabriela Mihaela', premiu:'Mențiune'},
         {loc:'8', nume:'Bălan Kevin Nicolas', clasa:'a VI-a', scoala:'Șc. Gim. «Dimitrie Cantemir» Brăila', judet:'Brăila', prof:'Bernacek Anamaria', premiu:'Participare'},
         {loc:'9', nume:'Fotea Luca Mario', clasa:'a VI-a', scoala:'Șc. Gim. «A.S. Pușkin» Brăila', judet:'Brăila', prof:'Anghel Nicoleta', premiu:'Participare'},
         {loc:'—', nume:'Bîrhală Eduard', clasa:'a VI-a', scoala:'Șc. Gim. Golești', judet:'Vrancea', prof:'Dobrinoiu Andrada', premiu:'Absent'},
@@ -791,7 +792,578 @@ var REZULTATE_DATA = {
       {loc:'1', nume:'Pîrlog Karol Gabriel', clasa:'a VII-a', scoala:'Liceul Tehnologic «Nicolae Oncescu» Ianca', judet:'Brăila', prof:'Morteciu Dumitru Dănuț', premiu:'Premiul I'},
       {loc:'2', nume:'Dima Laurentiu-Mihail', clasa:'a VII-a', scoala:'Palatul Copiilor Tulcea', judet:'Tulcea', prof:'Anca Macovschi', premiu:'Premiul II'},
     ]
-  }
+  },
+  powerpoint: {
+  "label": "Prezentări PowerPoint",
+  "icon": "📊",
+  "color": "#d1ecf1",
+  "columns": [
+    "nume",
+    "clasa",
+    "scoala",
+    "prof",
+    "premiu"
+  ],
+  "grupe": [
+    {
+      "titlu": "Clasa a IV-a",
+      "elevi": [
+        {
+          "nume": "Radu Cristian David",
+          "clasa": "a IV-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Premiul I"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a V-a",
+      "elevi": [
+        {
+          "nume": "Vanghelie Anastasia",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Anuti Serena Ioana",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Burlanescu Daria Maria si Roatesi Eva Maria",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Gurgu Iris Maria",
+          "clasa": "a V-a",
+          "scoala": "Colegiul National Ana Aslan Braila",
+          "prof": "Butea Eugenia Elena",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "CRACIUN PATRICK",
+          "clasa": "a V-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "BURADA IRIS",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Suciu Adelina Ioana",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mogos Maria Alessia",
+          "clasa": "a V-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Alecu Mihai Adrian Florentin + Ciobanu Vladimir Alexandru",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Moraru Ilinca Teodora + Minculescu Ilinca",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Cojocariu Toma Gabriel",
+          "clasa": "a V-a",
+          "scoala": "Scoala Gimnaziala \"Tudor Arghezi\"",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VI-a",
+      "elevi": [
+        {
+          "nume": "Andrei Gabriela Rodica",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Ana Aslan Braila",
+          "prof": "Butea Eugenia Elena",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Stanescu Izabela Teodora",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Popa Lavinia Ionelia",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Sirmachi Daria",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Calistrat Hogas Tecuci",
+          "prof": "Ionita Doina",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Panaghioiu-David-Cristian",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "BUTIA BOGDAN",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Cazacu Ioana",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Ionita Lavinia Nicoleta",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Nenciu Sorin",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "CUPRIAN ANDREI",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Ionita Andreea Denisa",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mihu Cosmin",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "CARCIUMARU ELENA",
+          "clasa": "a VI-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Musca Cornel Sebastian",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Nicolae Iorga Focsani",
+          "prof": "Mosescu Romica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Ana Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Stefan cel Mare Focsani",
+          "prof": "Ladunca Alina",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "TALPAU DAMIAN SI LEPADATU DRAGOS",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Dragomir Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Mocanu Daria Maria",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala A.S. Puskin Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Bajenaru Ioana Denisa",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "—",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "STOICA ROBERT SI PUIU ANDREI",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "DANCIUC STEFANIA",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Bogdan Ionut",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Procop David",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Tulcea",
+          "prof": "Macovschi Anca",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Batog Dragos-Stefan si Plisc Erika",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petrea Romina",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Batog Dragos-Stefan",
+          "clasa": "a VI-a",
+          "scoala": "Palatul Copiilor Focsani",
+          "prof": "Dumitru Emilia",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Antonia Nistor",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Carbunaru Mihai Antonio + Neacsu Darius Constantin",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Dan Nicholas",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Gheorghe Vlad-Mihai + Zaharia David",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Neagu Mihai Eduardo",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Tifesti Vrancea",
+          "prof": "Anutoiu Fanica",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "PETREA ROMINA (Scoala Golesti)",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Golesti Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Rogoz Nectarie",
+          "clasa": "a VI-a",
+          "scoala": "Scoala Gimnaziala Vulturu Vrancea",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VII-a",
+      "elevi": [
+        {
+          "nume": "Trofin Lara Maria",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu Ianca",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Onea George Marius",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Prof. Mihai Simbotin Carligele",
+          "prof": "Pirlea Gabriela Mihaela",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "BERCEA CRISTINA SI IANCU ILINCA",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Pirlog Karol Gabriel",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Dutu Luca",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Nicolae Iorga Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Caescu Tudor Alexandru + Voicu Andrei Gabriel",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Capatiina Dalia Maria",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Tehnologic Nicolae Oncescu",
+          "prof": "Morteciu Dumitru Danut",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Popescu Maria + Selagea Elisa Ilinca",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Ghinea Maria Andreea",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Marin Crina Raluca, Dudau Rares Gabriel, Iorga Loriana Maria",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Gh. M. Murgoci Braila",
+          "prof": "Marin Florina, Iosif Mimi",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Panait Sara-Andreea, Stan Adina-Maria",
+          "clasa": "a VII-a",
+          "scoala": "Colegiul National Gh. M. Murgoci Braila",
+          "prof": "Marin Florina",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Nita David si Borcan Medeea",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Al. I. Cuza Braila",
+          "prof": "Antohi Daniela",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Postolache Anna",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Teaca Maria Antonia",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Alexandru Vlahuta Gugesti",
+          "prof": "Grecu Daniel Valentin",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Melter Miruna Stefania",
+          "clasa": "a VII-a",
+          "scoala": "Liceul Teoretic Nicolae Oncescu Ianca",
+          "prof": "Morteciu Dumitru-Danut",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Barbieru Ioan David",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Fanus Neagu Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Berceanu Rares + Gavriloaia Marius Alexandru",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Enache Eva Maria",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Gherghina Mihai",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Duiliu Zamfirescu Dumbraveni",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Giurcan Maria",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Duiliu Zamfirescu Dumbraveni",
+          "prof": "Dobrinoiu Andrada",
+          "premiu": "Absent"
+        },
+        {
+          "nume": "Lalciu Luca Mihai + Niculescu Eduard",
+          "clasa": "a VII-a",
+          "scoala": "Scoala Gimnaziala Tudor Arghezi Bucuresti",
+          "prof": "Bondoc Gabriel + Petruta Konstantinou",
+          "premiu": "Absent"
+        }
+      ]
+    },
+    {
+      "titlu": "Clasa a VIII-a",
+      "elevi": [
+        {
+          "nume": "Oantță Radu",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul Economic Hermes Petrosani",
+          "prof": "Gherlan Georgiana-Monteola",
+          "premiu": "Premiul I"
+        },
+        {
+          "nume": "Spulber Leonard",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Premiul II"
+        },
+        {
+          "nume": "Cupliu Robert George",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala A.S. Puskin Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Premiul III"
+        },
+        {
+          "nume": "Ștefan Sergiu",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Guzu Darius Alexandru",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Fanus Neagu Braila",
+          "prof": "Anghel Nicoleta",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Munteanu Catalin",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul Economic Hermes Petrosani",
+          "prof": "Gherlan Georgiana-Monteola",
+          "premiu": "Mențiune"
+        },
+        {
+          "nume": "Vasiliu Roxana Maria",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "DIMA MIRCEA",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Cristian",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "VLADESCU MEDEEA",
+          "clasa": "a VIII-a",
+          "scoala": "Colegiul National Nicolae Balcescu Braila",
+          "prof": "Toncea Angelica",
+          "premiu": "Participare"
+        },
+        {
+          "nume": "Petre Alexia",
+          "clasa": "a VIII-a",
+          "scoala": "Scoala Gimnaziala Radu Tudoran Braila",
+          "prof": "Bernacek Anamaria",
+          "premiu": "Participare"
+        }
+      ]
+    }
+  ]
+}
 };
 
 var currentSect = 'all';
@@ -813,25 +1385,45 @@ function locClass(loc){
   return '';
 }
 
-function buildElevRows(elevi){
+var COL_DEFS = {
+  loc:    'Loc',
+  nume:   'Elev',
+  clasa:  'Clasa',
+  scoala: 'Unitatea școlară',
+  judet:  'Județ',
+  prof:   'Prof. îndrumător',
+  premiu: 'Premiu'
+};
+var DEFAULT_COLS = ['loc','nume','clasa','scoala','judet','prof','premiu'];
+
+function renderCell(e, col){
+  switch(col){
+    case 'loc':
+      var locDisp = (e.loc==='—'||e.loc==='-') ? '<span style="color:#ccc">—</span>' : '<span class="loc-badge '+locClass(e.loc)+'">'+esc(e.loc)+'</span>';
+      return '<td>'+locDisp+'</td>';
+    case 'nume':   return '<td><strong>'+esc(e.nume)+'</strong></td>';
+    case 'clasa':  return '<td>'+esc(e.clasa)+'</td>';
+    case 'scoala': return '<td>'+esc(e.scoala)+'</td>';
+    case 'judet':  return '<td style="white-space:nowrap">'+esc(e.judet)+'</td>';
+    case 'prof':   return '<td style="font-size:.8rem;color:var(--muted)">'+esc(e.prof)+'</td>';
+    case 'premiu': return '<td><span class="premiu-badge '+premiuClass(e.premiu)+'">'+esc(e.premiu)+'</span></td>';
+    default:       return '<td></td>';
+  }
+}
+
+function buildElevRows(elevi, cols){
+  cols = cols || DEFAULT_COLS;
   return elevi.map(function(e){
     var isAbs = (e.premiu||'').toLowerCase().includes('abs');
     var isPart = (e.premiu||'').toLowerCase() === 'participare';
     var cls = (isAbs || isPart) ? ' class="absent-row"' : '';
-    var locDisp = (e.loc==='—'||e.loc==='-') ? '<span style="color:#ccc">—</span>' : '<span class="loc-badge '+locClass(e.loc)+'">'+esc(e.loc)+'</span>';
-    return '<tr'+cls+'>'
-      +'<td>'+locDisp+'</td>'
-      +'<td><strong>'+esc(e.nume)+'</strong></td>'
-      +'<td>'+esc(e.clasa)+'</td>'
-      +'<td>'+esc(e.scoala)+'</td>'
-      +'<td style="white-space:nowrap">'+esc(e.judet)+'</td>'
-      +'<td style="font-size:.8rem;color:var(--muted)">'+esc(e.prof)+'</td>'
-      +'<td><span class="premiu-badge '+premiuClass(e.premiu)+'">'+esc(e.premiu)+'</span></td>'
-      +'</tr>';
+    return '<tr'+cls+'>'+cols.map(function(c){return renderCell(e,c);}).join('')+'</tr>';
   }).join('');
 }
 
 function buildSectBlock(key, data){
+  var cols = data.columns || DEFAULT_COLS;
+  var colspan = cols.length;
   var totalElevi = 0;
   var bodyHtml = '';
 
@@ -840,16 +1432,18 @@ function buildSectBlock(key, data){
     data.grupe.forEach(function(grupa){
       totalElevi += grupa.elevi.length;
       bodyHtml += '<tr style="background:var(--blue-light)!important;">'
-        +'<td colspan="7" style="font-weight:800;font-size:.82rem;color:var(--blue);padding:.5rem .9rem;letter-spacing:.3px;">'+esc(grupa.titlu)+'</td>'
+        +'<td colspan="'+colspan+'" style="font-weight:800;font-size:.82rem;color:var(--blue);padding:.5rem .9rem;letter-spacing:.3px;">'+esc(grupa.titlu)+'</td>'
         +'</tr>';
-      bodyHtml += buildElevRows(grupa.elevi);
+      bodyHtml += buildElevRows(grupa.elevi, cols);
     });
   } else {
     totalElevi = data.elevi.length;
-    bodyHtml = buildElevRows(data.elevi);
+    bodyHtml = buildElevRows(data.elevi, cols);
   }
 
   if(!totalElevi) return '';
+
+  var headHtml = cols.map(function(c){return '<th>'+esc(COL_DEFS[c]||c)+'</th>';}).join('');
 
   return '<div class="sect-block" data-sect="'+key+'">'
     +'<div class="sect-header">'
@@ -858,7 +1452,7 @@ function buildSectBlock(key, data){
     +'<span class="sect-count">'+totalElevi+' elevi</span>'
     +'</div>'
     +'<div class="table-wrap"><table class="rez-table">'
-    +'<thead><tr><th>Loc</th><th>Elev</th><th>Clasa</th><th>Unitatea școlară</th><th>Județ</th><th>Prof. îndrumător</th><th>Premiu</th></tr></thead>'
+    +'<thead><tr>'+headHtml+'</tr></thead>'
     +'<tbody>'+bodyHtml+'</tbody>'
     +'</table></div>'
     +'</div>';
